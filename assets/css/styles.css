@@ -305,6 +305,9 @@ img {
   display: flex;
   justify-content: center;
   column-gap: 4.5rem;
+  margin-top: 2rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .home__info-title {
@@ -313,6 +316,7 @@ img {
   font-size: var(--big-font-size);
   font-weight: var(--font-bold);
   margin-bottom: 0.5rem;
+  line-height: 1;
 }
 
 .home__info-description {
@@ -320,6 +324,9 @@ img {
   color: var(--white-color);
   font-family: var(--body-font);
   font-weight: var(--font-regular);
+  text-align: center;
+  line-height: 1.4;
+  opacity: 0.9;
 }
 
 .home__images {
@@ -917,6 +924,21 @@ img {
   .footer__content {
     grid-template-columns: max-content;
   }
+  
+  .home__info {
+    column-gap: 2rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  
+  .home__info-title {
+    font-size: 1.8rem;
+  }
+  
+  .home__info-description {
+    font-size: 0.8rem;
+  }
 }
 
 /* For Medium Devices */
@@ -932,6 +954,10 @@ img {
 
   .footer__content {
     grid-template-columns: repeat(3, max-content);
+  }
+  
+  .home__info {
+    column-gap: 3rem;
   }
 }
 
@@ -951,6 +977,10 @@ img {
   .footer__container {
     grid-template-columns: repeat(2, max-content);
     justify-content: space-between;
+  }
+  
+  .home__info {
+    column-gap: 4rem;
   }
 }
 
@@ -1016,10 +1046,19 @@ img {
   .home__info {
     justify-content: initial;
     column-gap: 5.5rem;
+    margin-top: 3rem;
+    padding: 2.5rem 0;
   }
+  
+  .home__info-title {
+    font-size: var(--big-font-size);
+  }
+  
   .home__info-description {
     font-size: var(--normal-font-size);
+    text-align: left;
   }
+  
   .home__img-1 {
     width: 550px;
     margin-left: 0;
