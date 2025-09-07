@@ -104,3 +104,15 @@ sr.reveal(".home__images", { origin: "bottom", delay: 500 });
 sr.reveal(".about__images, .contact__img", { origin: "left" });
 sr.reveal(".about__data, .contact__data", { origin: "right" });
 sr.reveal(".projects__card", { interval: 50 });
+sr.reveal(".home__motto", {
+  origin: "bottom",
+  distance: "50px",
+  delay: 800,
+  duration: 2000,
+  scale: 0.8,
+});
+sr.reveal(".testimonial__card", {
+  interval: 100,
+  origin: "bottom",
+  distance: "80px",
+});
