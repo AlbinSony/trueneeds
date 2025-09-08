@@ -4,7 +4,7 @@
     </a>
     </br>
     </br>
-  <h3 align="center">🏗️ Bâtir Ensemble &nbsp; — &nbsp; Entreprise de Construction</h3>
+  <h3 align="center">🏗️ True Needs Sustainable Developers &nbsp; — &nbsp; Modern Construction Company</h3>
 </div>
 
 ## <br /> 📌 Sommaire
@@ -16,7 +16,7 @@
 
 ## <br /> <a name="introduction">🎨 Introduction</a>
 
-Bâtir Ensemble est une landing page moderne et responsive pour une entreprise du bâtiment. Elle présente services, réalisations, témoignages et contact, avec animations au scroll via ScrollReveal et slider interactif via Swiper.js, le tout dans un design clair et modulaire pour une image professionnelle et engageante.
+True Needs Sustainable Developers is a modern and responsive website for a construction company. Built with the latest design system principles, it features smooth animations, micro-interactions, and dynamic content loading from Sanity CMS. The site showcases services, projects, testimonials, and contact information with a clean, professional design that emphasizes sustainability and quality craftsmanship.
 
 ## <br /> <a name="technologies">🛠️ Technologies</a>
 

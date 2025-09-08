@@ -72,42 +72,41 @@
     <main class="main">
       <!--==================== HOME ====================-->
       <section class="home section" id="home">
-        <img
-          src="assets/img/home-lines-bg.svg"
-          alt="image"
-          class="home__lines" />
-
+        <!-- Background Slideshow -->
+        <div class="home__slideshow">
+          <div class="home__slide active"></div>
+          <div class="home__slide"></div>
+        </div>
+        
         <div class="home__container container grid">
           <div class="home__content grid">
             <div class="home__data">
-              <h1 class="home__title">
-                EXPLORE THE EXCELLENCE <br />
-                OF TRUE NEEDS <br />
+              <h1 class="home__title animate-fadeInUp">
+                <span class="nowrap">EXPLORE THE EXCELLENCE</span> <br />
+                OF <br />
+                TRUE NEEDS <br />
                 <span class="home__motto">TRULY BUILT</span>
               </h1>
+              <div class="home__divider"></div>
 
-              <p class="home__description">
-                Where construction meets conscientious craftsmanship - We deliver sustainable solutions for your construction needs
-              </p>
-
-              <div class="home__buttons">
+              <div class="home__buttons animate-fadeInUp">
                 <a href="#services" class="button">Our Services</a>
 
-                <a href="#projects" class="button__link">
+                <a href="#projects" class="button__link button__link--small">
                   <span>View Projects</span>
                   <i class="ri-arrow-right-line"></i>
                 </a>
               </div>
             </div>
 
-            <div class="home__info">
+            <div class="home__info animate-fadeInUp">
               <div>
                 <h3 class="home__info-title">10+</h3>
                 <p class="home__info-description">Years of<br />Experience</p>
               </div>
 
               <div>
-                <h3 class="home__info-title">200</h3>
+                <h3 class="home__info-title">200+</h3>
                 <p class="home__info-description">
                   Projects <br />
                   Completed
@@ -115,16 +114,155 @@
               </div>
             </div>
           </div>
+          
+        </div>
+      </section>
 
-          <div class="home__images">
-            <img
-              src="assets/img/home-img-1.png"
-              alt="image"
-              class="home__img-1" />
-            <img
-              src="assets/img/home-img-2.png"
-              alt="image"
-              class="home__img-2" />
+      <!--==================== CORE VALUES (STACKED LIKE STATS) ====================-->
+      <section class="values section">
+        <div class="responsible__stats container">
+          <h3 class="responsible__stats-title">Our Core Values</h3>
+          <div class="responsible__stats-grid values__grid">
+            <div class="responsible__stat-item">
+              <span class="responsible__stat-number">01</span>
+              <p class="responsible__stat-text">SUSTAINABLE DEVELOPMENT</p>
+            </div>
+            <div class="responsible__stat-item">
+              <span class="responsible__stat-number">02</span>
+              <p class="responsible__stat-text">QUALITY GUARANTEED</p>
+            </div>
+            <div class="responsible__stat-item">
+              <span class="responsible__stat-number">03</span>
+              <p class="responsible__stat-text">INNOVATION WITH INTEGRITY</p>
+            </div>
+            <div class="responsible__stat-item">
+              <span class="responsible__stat-number">04</span>
+              <p class="responsible__stat-text">CONSCIENTIOUS CRAFTSMANSHIP</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== RESPONSIBLE BUILDERS ====================-->
+      <section class="responsible section" id="responsible">
+        <div class="responsible__container container">
+          <div class="responsible__header">
+            <span class="section__subtitle">THE RESPONSIBLE BUILDERS</span>
+            <h2 class="section__title">
+              The Responsible Builders in Kerala
+            </h2>
+            <p class="responsible__description">
+              Being one of the top real estate home builders in Kerala, we bring you a new array of apartments, flats, and villas that match your requirements and complement your lifestyle. We differ from other home builders in Kochi, Kerala with our unique styles and perceptions.
+            </p>
+            <p class="responsible__description">
+              Our unique designs with assured quality checks of process and materials ensure you a perfect home. We are one of the leading home builders in Kerala who have undertaken several projects and have successfully completed these projects on time.
+            </p>
+            <a href="#about" class="button">Know More About Asset</a>
+          </div>
+          
+          <div class="responsible__stats">
+            <h3 class="responsible__stats-title">What Makes Us Unique</h3>
+            <div class="responsible__stats-grid">
+              <div class="responsible__stat-item">
+                <span class="responsible__stat-number">01</span>
+                <p class="responsible__stat-text">INDIA'S FIRST<br>LIFECYCLE BUILDER</p>
+              </div>
+              <div class="responsible__stat-item">
+                <span class="responsible__stat-number">90</span>
+                <p class="responsible__stat-text">HANDED OVER<br>90 PROJECTS</p>
+              </div>
+              <div class="responsible__stat-item">
+                <span class="responsible__stat-number">120</span>
+                <p class="responsible__stat-text">PROJECTS ACROSS KERALA<br>IN 10 CITIES</p>
+              </div>
+              <div class="responsible__stat-item">
+                <span class="responsible__stat-number">8K+</span>
+                <p class="responsible__stat-text">OVER 8000+ SATISFIED<br>CUSTOMERS GLOBALLY</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== LIFECYCLE BANNER ====================-->
+      <section class="lifecycle section">
+        <div class="lifecycle__container container">
+          <div class="lifecycle__content">
+            <div class="lifecycle__text">
+              <span class="lifecycle__label">INDIA'S FIRST</span>
+              <h2 class="lifecycle__title">LIFECYCLE BUILDER</h2>
+            </div>
+            <div class="lifecycle__image">
+              <img src="assets/img/about-img-1.png" alt="Lifecycle Builder" class="lifecycle__img">
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== PROJECT CATEGORIES ====================-->
+      <section class="categories section" id="categories">
+        <div class="categories__container container grid">
+          <article class="categories__card">
+            <div class="categories__image">
+              <img src="assets/img/projects-img-1.png" alt="Singular Living" class="categories__img">
+              <div class="categories__overlay">
+                <h3 class="categories__title">Singular Living</h3>
+                <p class="categories__subtitle">Safe, private, and self-contained micro apartments for single residents</p>
+                <a href="#projects" class="categories__button">View Projects</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="categories__card">
+            <div class="categories__image">
+              <img src="assets/img/projects-img-2.png" alt="Budget Residences" class="categories__img">
+              <div class="categories__overlay">
+                <h3 class="categories__title">Budget Residences</h3>
+                <p class="categories__subtitle">Budget apartments for families who aspire for a better living environment</p>
+                <a href="#projects" class="categories__button">View Projects</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="categories__card">
+            <div class="categories__image">
+              <img src="assets/img/projects-img-3.png" alt="Luxury Residences" class="categories__img">
+              <div class="categories__overlay">
+                <h3 class="categories__title">Luxury Residences</h3>
+                <p class="categories__subtitle">Exotic Luxury Residences for achievers to upgrade to a charming lifestyle</p>
+                <a href="#projects" class="categories__button">View Projects</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="categories__card">
+            <div class="categories__image">
+              <img src="assets/img/about-img-2.png" alt="Senior Living" class="categories__img">
+              <div class="categories__overlay">
+                <h3 class="categories__title">Senior Living</h3>
+                <p class="categories__subtitle">Senior Residences for those who believe that retiring doesn't mean retiring from life</p>
+                <a href="#projects" class="categories__button">View Projects</a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!--==================== CORPORATE VIDEO ====================-->
+      <section class="corporate-video section">
+        <div class="corporate-video__container container">
+          <div class="corporate-video__content">
+            <div class="corporate-video__text">
+              <h2 class="corporate-video__title">Responsibly Yours!</h2>
+              <p class="corporate-video__subtitle">Corporate Video</p>
+              <a href="#" class="button corporate-video__button">View Gallery</a>
+            </div>
+            <div class="corporate-video__image">
+              <img src="assets/img/about-img-1.png" alt="Corporate Video" class="corporate-video__img">
+              <div class="corporate-video__play">
+                <i class="ri-play-circle-fill"></i>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -134,7 +272,7 @@
         <div class="about__container container grid">
           <div class="about__data">
             <span class="section__subtitle">WHO WE ARE ?</span>
-            <h2 class="section__title">
+            <h2 class="section__title glitch-text" data-text="EXPLORE THE EXCELLENCE">
               EXPLORE THE EXCELLENCE <br />
               OF TRUE NEEDS
             </h2>
@@ -188,168 +326,68 @@
       </section>
 
       <!--==================== SERVICES ====================-->
-      <section class="services section" id="services">
-        <div class="services__container container grid">
-          <div class="services__data">
-            <div>
+      <section class="services section services--ladder" id="services">
+        <div class="services__container container">
+          <div class="services__header">
+            <div class="services__heading">
               <span class="section__subtitle">OUR SERVICES</span>
-              <h2 class="section__title">
-                Comprehensive Construction <br />
-                & Manufacturing Solutions
-              </h2>
+              <h2 class="section__title">Comprehensive Construction <br />& Manufacturing Solutions</h2>
             </div>
-
-            <p class="services__description">
-              At True Needs Sustainable Developers Pvt. Ltd., we offer a comprehensive range of 
-              construction services tailored to meet the diverse needs of our clients.
-            </p>
-
+            <p class="services__description">At True Needs Sustainable Developers Pvt. Ltd., we offer a comprehensive range of construction services tailored to meet the diverse needs of our clients.</p>
             <a href="#contact" class="button">Contact Us</a>
           </div>
 
-          <div class="services__swiper swiper">
-            <div class="swiper-wrapper">
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-leaf-line"></i>
-                </div>
+          <div class="services__grid">
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-leaf-line"></i></div>
+              <h3 class="services__title">Green Building <br />Construction</h3>
+              <p>Specializing in environmentally conscious construction practices with energy-efficient designs and sustainable building materials.</p>
+            </article>
 
-                <h3 class="services__title">
-                  Green Building <br />
-                  Construction
-                </h3>
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-building-line"></i></div>
+              <h3 class="services__title">Residential <br />Construction</h3>
+              <p>Crafting homes that blend comfort, functionality, and aesthetic appeal with customized designs to suit individual preferences.</p>
+            </article>
 
-                <p>
-                  Specializing in environmentally conscious construction practices with 
-                  energy-efficient designs and sustainable building materials.
-                </p>
-              </article>
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-office-building-line"></i></div>
+              <h3 class="services__title">Commercial <br />Projects</h3>
+              <p>Delivering innovative solutions for commercial spaces with tailored designs to enhance productivity and create distinctive environments.</p>
+            </article>
 
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-building-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Residential <br />
-                  Construction
-                </h3>
-
-                <p>
-                  Crafting homes that blend comfort, functionality, and aesthetic appeal with 
-                  customized designs to suit individual preferences.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-office-building-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Commercial <br />
-                  Projects
-                </h3>
-
-                <p>
-                  Delivering innovative solutions for commercial spaces with tailored designs 
-                  to enhance productivity and create distinctive environments.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-tools-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Renovation & <br />
-                  Remodeling
-                </h3>
-
-                <p>
-                  Transforming existing spaces with thoughtful renovations, upgrading structures 
-                  to meet modern standards while preserving character.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-road-map-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Infrastructure <br />
-                  Development
-                </h3>
-
-                <p>
-                  Contributing to essential public infrastructure development with expertise 
-                  in roads, bridges, and utility installations.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-settings-3-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Project <br />
-                  Management
-                </h3>
-
-                <p>
-                  Providing end-to-end project management services ensuring timely completion, 
-                  budget adherence, and quality control.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-palette-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Interior Design <br />
-                  & Fit-Outs
-                </h3>
-
-                <p>
-                  Creating aesthetically pleasing and functional interior spaces with tailored 
-                  solutions aligned with client preferences.
-                </p>
-              </article>
-
-              <article class="services__card swiper-slide">
-                <div class="services__icon">
-                  <i class="ri-stack-line"></i>
-                </div>
-
-                <h3 class="services__title">
-                  Manufacturing <br />
-                  & Rentals
-                </h3>
-
-                <p>
-                  Brick manufacturing, scaffolding rentals, machinery leasing, materials supply, 
-                  and comprehensive logistics solutions for construction needs.
-                </p>
-              </article>
-            </div>
-          </div>
-
-          <!-- Nav Buttons -->
-          <div class="swiper-button-prev">
-            <i class="ri-arrow-left-line"></i>
-          </div>
-
-          <div class="swiper-button-next">
-            <i class="ri-arrow-right-line"></i>
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-tools-line"></i></div>
+              <h3 class="services__title">Renovation & <br />Remodeling</h3>
+              <p>Transforming existing spaces with thoughtful renovations, upgrading structures to meet modern standards while preserving character.</p>
+            </article>
           </div>
         </div>
+      </section>
 
-        <div class="services__shape"></div>
+      <!--==================== SERVICE HIGHLIGHTS ====================-->
+      <section class="service-highlights section">
+        <div class="responsible__stats container">
+          <h3 class="responsible__stats-title">What We Deliver</h3>
+          <div class="responsible__stats-grid">
+            <div class="responsible__stat-item hover-raise">
+              <span class="responsible__stat-number">01</span>
+              <p class="responsible__stat-text">GREEN BUILDING CONSTRUCTION<br>Energy-efficient and sustainable materials</p>
+            </div>
+            <div class="responsible__stat-item hover-raise">
+              <span class="responsible__stat-number">02</span>
+              <p class="responsible__stat-text">RESIDENTIAL CONSTRUCTION<br>Comfortable, functional and customized homes</p>
+            </div>
+            <div class="responsible__stat-item hover-raise">
+              <span class="responsible__stat-number">03</span>
+              <p class="responsible__stat-text">COMMERCIAL PROJECTS<br>Productive and distinctive workspaces</p>
+            </div>
+            <div class="responsible__stat-item hover-raise">
+              <span class="responsible__stat-number">04</span>
+              <p class="responsible__stat-text">RENOVATION & REMODELING<br>Thoughtful upgrades preserving character</p>
+            </div>
+          </div>
+        </div>
       </section>
 
       <!--==================== PROJECTS ====================-->
@@ -764,6 +802,13 @@
     <a href="#" class="scrollup" id="scroll-up">
       <i class="ri-arrow-up-line"></i>
     </a>
+
+    <!--=============== SANITY CLIENT ===============-->
+    <script src="https://cdn.jsdelivr.net/npm/@sanity/client@6.4.11/dist/sanityClient.umd.js"></script>
+
+    <!--=============== SANITY CONFIG JS ===============-->
+    <script src="assets/js/sanity-config.js"></script>
+
     <!--=============== SCROLLREVEAL ===============-->
     <script src="assets/js/scrollreveal.min.js"></script>
 
@@ -773,6 +818,61 @@
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
+    <!--=============== ENHANCED INTERACTIONS ===============-->
+    <script src="assets/js/enhanced-interactions.js"></script>
+
+    <!--=============== HOMEPAGE PROJECTS LOADER ===============-->
+    <script>
+      // Load featured projects on homepage
+      document.addEventListener('DOMContentLoaded', async () => {
+        try {
+          const featuredProjects = await fetchFeaturedProjects(3);
+          
+          if (featuredProjects && featuredProjects.length > 0) {
+            console.log(`Loaded ${featuredProjects.length} featured projects from Sanity`);
+            updateHomepageProjects(featuredProjects);
+          }
+        } catch (error) {
+          console.log('Using static projects on homepage');
+        }
+      });
+
+      function updateHomepageProjects(projects) {
+        const projectCards = document.querySelectorAll('.projects__card');
+        
+        projects.forEach((project, index) => {
+          if (projectCards[index]) {
+            const card = projectCards[index];
+            const img = card.querySelector('.projects__img');
+            const category = card.querySelector('.projects__data span');
+            const title = card.querySelector('.projects__title');
+            const date = card.querySelector('.projects__date');
+            const description = card.querySelector('.projects__data p');
+            
+            if (img && project.image?.asset?.url) {
+              img.src = project.image.asset.url;
+              img.alt = project.title;
+            }
+            
+            if (category) category.textContent = project.category || 'Construction';
+            if (title) title.textContent = project.title;
+            if (date) date.textContent = formatProjectDate(project.date);
+            if (description) description.textContent = project.description || 'Professional construction project completed with high quality standards.';
+          }
+        });
+      }
+
+      function formatProjectDate(dateString) {
+        if (!dateString) return 'Recent';
+        const date = new Date(dateString);
+        return date.toLocaleDateString('en-US', { 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric' 
+        });
+      }
+    </script>
+
     <style>
       /* Enhanced About Section */
       .about {
@@ -780,18 +880,18 @@
       }
 
       .about__container {
-        gap: 4rem;
+        gap: 3.5rem;
         align-items: center;
       }
 
       .about__data {
-        max-width: 520px;
+        max-width: 680px;
       }
 
       .about__description {
-        margin: 2rem 0 2.5rem 0;
-        line-height: 1.8;
-        font-size: 1rem;
+        margin: 1.5rem 0 2rem 0;
+        line-height: 1.85;
+        font-size: 1.05rem;
         color: var(--text-color);
         font-family: var(--body-font);
         font-weight: var(--font-regular);
@@ -799,24 +899,24 @@
 
       .about__list {
         grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-        margin-bottom: 3rem;
+        gap: 1.25rem 1.5rem;
+        margin-bottom: 2rem;
       }
 
       .about__list-item {
         display: flex;
         align-items: center;
-        gap: 1rem;
-        padding: 0.75rem 0;
+        gap: 0.75rem;
+        padding: 0.5rem 0;
       }
 
       .about__list-item i {
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         color: var(--first-color);
       }
 
       .about__list-item span {
-        font-weight: var(--font-medium);
+        font-weight: var(--font-semi-bold);
         color: var(--title-color);
         font-family: var(--subheading-font);
       }
