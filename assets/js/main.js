@@ -12,6 +12,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navToggle) {
     navToggle.addEventListener('click', () => {
       navMenu.classList.add('show-menu');
+      header?.classList.add('menu-open');
+      document.body.classList.add('menu-open');
       document.body.style.overflow = 'hidden';
     });
   }
@@ -19,6 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
   if (navClose) {
     navClose.addEventListener('click', () => {
       navMenu.classList.remove('show-menu');
+      header?.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
       document.body.style.overflow = '';
     });
   }
@@ -26,6 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
   navLinks.forEach(link => {
     link.addEventListener('click', () => {
       navMenu.classList.remove('show-menu');
+      header?.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
       document.body.style.overflow = '';
     });
   });
@@ -46,6 +52,8 @@ document.addEventListener('DOMContentLoaded', () => {
   const onResize = () => {
     if (window.innerWidth > 1150) {
       navMenu.classList.remove('show-menu');
+      header?.classList.remove('menu-open');
+      document.body.classList.remove('menu-open');
       document.body.style.overflow = '';
     } else {
       updateHeader();
