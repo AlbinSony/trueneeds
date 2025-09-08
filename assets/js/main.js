@@ -10,15 +10,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /*=============== NAVIGATION HANDLERS ===============*/
   if (navToggle) {
-    navToggle.addEventListener('click', () => navMenu.classList.add('show-menu'));
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.add('show-menu');
+      document.body.style.overflow = 'hidden';
+    });
   }
 
   if (navClose) {
-    navClose.addEventListener('click', () => navMenu.classList.remove('show-menu'));
+    navClose.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+      document.body.style.overflow = '';
+    });
   }
 
   navLinks.forEach(link => {
-    link.addEventListener('click', () => navMenu.classList.remove('show-menu'));
+    link.addEventListener('click', () => {
+      navMenu.classList.remove('show-menu');
+      document.body.style.overflow = '';
+    });
   });
 
   /* Disable body scroll when mobile menu is open */
