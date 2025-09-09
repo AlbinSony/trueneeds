@@ -53,24 +53,89 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
   
-  // Enhanced animation setup
+  // Enhanced animation setup for both desktop and mobile
   const observerOptions = {
     threshold: 0.1,
-    rootMargin: '0px 0px -100px 0px'
+    rootMargin: '0px 0px -50px 0px' // Reduced margin for better mobile detection
   };
   
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('in-view');
+        entry.target.classList.add('animate'); // Add animate class for mobile fallback
       }
     });
   }, observerOptions);
   
-  // Observe all animatable elements
-  document.querySelectorAll('.animate-on-scroll, .projects__card, .services__card').forEach(el => {
+  // Observe all animatable elements - comprehensive coverage
+  const animatableElements = document.querySelectorAll(`
+    .animate-on-scroll, 
+    .projects__card, 
+    .projects__container,
+    .services__card,
+    .services__header,
+    .services__description,
+    .testimonial__card,
+    .contact__card,
+    .contact__container,
+    .responsible__stats,
+    .responsible__header,
+    .responsible__description,
+    .categories__card,
+    .categories__container,
+    .section__title,
+    .section__subtitle,
+    .home__content,
+    .home__title,
+    .home__buttons,
+    .home__info,
+    .home__divider,
+    .about__images,
+    .about__container,
+    .about__data,
+    .lifecycle__content,
+    .corporate-video__content,
+    .values__grid,
+    .footer__container,
+    .footer__content,
+    .nav__menu,
+    .button,
+    .button__link,
+    .responsible__stat-item,
+    .services__icon,
+    .contact__icon,
+    .testimonial__author,
+    .projects__data,
+    .categories__overlay
+  `);
+  
+  animatableElements.forEach(el => {
     observer.observe(el);
   });
+
+  // Mobile-specific animation enhancements
+  const isMobile = window.innerWidth <= 768;
+  
+  if (isMobile) {
+    // Add staggered animation delays for mobile
+    animatableElements.forEach((el, index) => {
+      el.style.animationDelay = `${index * 0.1}s`;
+    });
+    
+    // Add touch-friendly hover effects
+    const cards = document.querySelectorAll('.services__card, .projects__card, .testimonial__card');
+    cards.forEach(card => {
+      card.addEventListener('touchstart', function() {
+        this.style.transform = 'translateY(-5px) scale(1.02)';
+        this.style.transition = 'all 0.3s ease';
+      });
+      
+      card.addEventListener('touchend', function() {
+        this.style.transform = 'translateY(0) scale(1)';
+      });
+    });
+  }
   
   // Add smooth scroll enhancement
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {

@@ -174,6 +174,61 @@ img {
   }
 }
 
+@keyframes fadeInBottom {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(60px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @keyframes glitchEffect {
   0%, 90%, 100% {
     transform: translate(0);
@@ -222,13 +277,152 @@ img {
   animation: fadeInRight 0.6s ease-out;
 }
 
+.animate-fadeInBottom {
+  animation: fadeInBottom 0.8s ease-out;
+}
+
+.animate-slideInUp {
+  animation: slideInUp 0.8s ease-out;
+}
+
+.animate-slideInLeft {
+  animation: slideInLeft 0.8s ease-out;
+}
+
+.animate-slideInRight {
+  animation: slideInRight 0.8s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.6s ease-out;
+}
+
 .animate-glitch:hover {
   animation: glitchEffect 0.3s ease-in-out;
 }
 
 .animate-tilt:hover {
   animation: gentleTilt 2s ease-in-out infinite;
-}l {
+}
+
+/* Mobile-specific animation classes */
+@media screen and (max-width: 768px) {
+  .animate-fadeInUp,
+  .animate-fadeInLeft,
+  .animate-fadeInRight,
+  .animate-fadeInBottom,
+  .animate-slideInUp,
+  .animate-slideInLeft,
+  .animate-slideInRight,
+  .animate-scaleIn {
+    animation-duration: 0.8s; /* Slightly longer on mobile for better visibility */
+  }
+  
+  /* Comprehensive mobile animations - all sections */
+  .home__content,
+  .home__title,
+  .home__buttons,
+  .home__info,
+  .home__divider,
+  .services__card,
+  .services__header,
+  .services__description,
+  .services__icon,
+  .projects__card,
+  .projects__container,
+  .projects__data,
+  .testimonial__card,
+  .testimonial__author,
+  .contact__card,
+  .contact__container,
+  .contact__icon,
+  .responsible__stats,
+  .responsible__header,
+  .responsible__description,
+  .responsible__stat-item,
+  .categories__card,
+  .categories__container,
+  .categories__overlay,
+  .lifecycle__content,
+  .corporate-video__content,
+  .about__container,
+  .about__data,
+  .about__images,
+  .section__title,
+  .section__subtitle,
+  .values__grid,
+  .footer__container,
+  .footer__content,
+  .button,
+  .button__link {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease-out;
+  }
+  
+  /* Animation trigger states */
+  .home__content.animate,
+  .home__title.animate,
+  .home__buttons.animate,
+  .home__info.animate,
+  .home__divider.animate,
+  .services__card.animate,
+  .services__header.animate,
+  .services__description.animate,
+  .services__icon.animate,
+  .projects__card.animate,
+  .projects__container.animate,
+  .projects__data.animate,
+  .testimonial__card.animate,
+  .testimonial__author.animate,
+  .contact__card.animate,
+  .contact__container.animate,
+  .contact__icon.animate,
+  .responsible__stats.animate,
+  .responsible__header.animate,
+  .responsible__description.animate,
+  .responsible__stat-item.animate,
+  .categories__card.animate,
+  .categories__container.animate,
+  .categories__overlay.animate,
+  .lifecycle__content.animate,
+  .corporate-video__content.animate,
+  .about__container.animate,
+  .about__data.animate,
+  .about__images.animate,
+  .section__title.animate,
+  .section__subtitle.animate,
+  .values__grid.animate,
+  .footer__container.animate,
+  .footer__content.animate,
+  .button.animate,
+  .button__link.animate {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Staggered animation delays for better visual flow */
+  .services__card:nth-child(1) { transition-delay: 0.1s; }
+  .services__card:nth-child(2) { transition-delay: 0.2s; }
+  .services__card:nth-child(3) { transition-delay: 0.3s; }
+  .services__card:nth-child(4) { transition-delay: 0.4s; }
+  
+  .projects__card:nth-child(1) { transition-delay: 0.1s; }
+  .projects__card:nth-child(2) { transition-delay: 0.2s; }
+  .projects__card:nth-child(3) { transition-delay: 0.3s; }
+  
+  .responsible__stat-item:nth-child(1) { transition-delay: 0.1s; }
+  .responsible__stat-item:nth-child(2) { transition-delay: 0.2s; }
+  .responsible__stat-item:nth-child(3) { transition-delay: 0.3s; }
+  .responsible__stat-item:nth-child(4) { transition-delay: 0.4s; }
+  
+  .categories__card:nth-child(1) { transition-delay: 0.1s; }
+  .categories__card:nth-child(2) { transition-delay: 0.2s; }
+  .categories__card:nth-child(3) { transition-delay: 0.3s; }
+  .categories__card:nth-child(4) { transition-delay: 0.4s; }
+}
+
+ul {
   list-style: none;
 }
 
@@ -376,7 +570,18 @@ img {
     border-left: 2px solid var(--border-light);
     box-shadow: var(--shadow-xl);
   }
+  
+  /* For transparent header, use a semi-transparent dark background for better contrast */
+  .header--transparent .nav__menu .nav__list {
+    background: rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+  }
   .nav__menu.show-menu .nav__link { color: var(--title-color); }
+  
+  /* Override for transparent header - keep white text in mobile menu */
+  .header--transparent .nav__menu.show-menu .nav__link { color: var(--white-color); }
+  .header--transparent .nav__menu.show-menu .nav__link::before { background: var(--white-color); }
 
   /* Show only close icon when expanded; hide toggle */
   .nav__close { display: none; }
@@ -478,6 +683,13 @@ img {
   /* close icon should be dark for contrast against white panel */
   .header--transparent .nav__close,
   .header--transparent .nav__close i { color: var(--title-color); }
+  
+  /* Ensure logo and navbar items are white in transparent header on mobile */
+  .header--transparent .nav__logo span,
+  .header--transparent .nav__logo i { color: var(--white-color); }
+  
+  .header--transparent .nav__menu .nav__link { color: var(--white-color); }
+  .header--transparent .nav__menu .nav__link::before { background: var(--white-color); }
 }
 
 /* Active Link */
@@ -506,6 +718,20 @@ img {
   width: 100%;
   height: 100%;
   z-index: 0;
+  overflow: hidden; /* Ensure slides don't overflow */
+}
+
+/* Mobile-specific slideshow fixes */
+@media screen and (max-width: 768px) {
+  .home__slideshow {
+    min-height: 100vh; /* Ensure full height on mobile */
+    background-color: #000; /* Fallback background */
+  }
+  
+  .home__slide {
+    min-height: 100vh; /* Ensure slides cover full mobile viewport */
+    background-attachment: scroll; /* Fix mobile background attachment */
+  }
 }
 
 .home__slide {
@@ -520,6 +746,16 @@ img {
   background-position: center;
   background-repeat: no-repeat;
   animation: kenBurns 18s ease-in-out infinite;
+  z-index: 0; /* Ensure slides are behind content */
+}
+
+/* Ensure slideshow works on mobile devices */
+@media screen and (max-width: 768px) {
+  .home__slide {
+    background-attachment: scroll; /* Fix for mobile background issues */
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 .home__slide.active {
@@ -528,10 +764,29 @@ img {
 
 .home__slide:nth-child(1) {
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/bgimg2.jpg');
+  background-color: #1a1a1a; /* Fallback background color */
 }
 
 .home__slide:nth-child(2) {
   background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.7)), url('../img/bgimg4.jpg');
+  background-color: #2a2a2a; /* Fallback background color */
+}
+
+/* Mobile-specific background fixes */
+@media screen and (max-width: 768px) {
+  .home__slide:nth-child(1) {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/bgimg2.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
+  
+  .home__slide:nth-child(2) {
+    background-image: linear-gradient(135deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url('../img/bgimg4.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }
 }
 
 .home::before {
@@ -559,6 +814,8 @@ img {
   padding-inline: var(--spacing-md);
   justify-items: center;
   justify-content: center;
+  text-align: center;
+  align-items: center;
 }
 
 .home__content {
@@ -574,12 +831,17 @@ img {
   margin-inline: auto;
 }
 
-/* On large screens, shift hero content left for stronger composition */
+/* Force center alignment on all screen sizes */
 @media screen and (min-width: 1150px) {
-  .home__content { justify-items: start; text-align: left; margin-left: 0; }
-  .home__data { text-align: left; }
-  .home__buttons { align-items: flex-start; }
-  .home__info { justify-content: flex-start; }
+  .home__content { 
+    justify-items: center; 
+    text-align: center; 
+    margin-left: auto; 
+    margin-right: auto; 
+  }
+  .home__data { text-align: center; }
+  .home__buttons { align-items: center; }
+  .home__info { justify-content: center; }
 }
 
 .home__data,
@@ -598,13 +860,14 @@ img {
 .home__title {
   color: var(--white-color);
   font-family: 'Poppins', var(--header-font);
-  font-size: clamp(1.9rem, 4.8vw, 3.4rem);
+  font-size: clamp(1.5rem, 4.2vw, 3.4rem); /* Improved min/max values to prevent overflow */
   font-weight: 800;
   margin-bottom: .65rem;
   line-height: 1.02;
   letter-spacing: -0.5px;
   text-shadow: 0 8px 32px rgba(0,0,0,.5);
   text-wrap: balance;
+  padding: 0 0.5rem; /* Added text padding to prevent edge cropping */
 }
 
 .home__motto {
@@ -641,7 +904,16 @@ img {
   filter: drop-shadow(0 4px 14px rgba(200,16,46,.4));
 }
 
-.nowrap { white-space: nowrap; }
+.nowrap { 
+  white-space: nowrap; 
+}
+
+/* Allow text wrapping on mobile to prevent horizontal overflow */
+@media screen and (max-width: 768px) {
+  .nowrap {
+    white-space: normal;
+  }
+}
 
 .home__buttons {
   display: flex;
@@ -650,6 +922,10 @@ img {
   align-items: center;
   gap: 0.75rem;
   margin-bottom: 0.5rem;
+  width: 100%;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Scroll indicator */
@@ -1564,7 +1840,7 @@ img {
 /* For Small Devices */
 @media screen and (max-width: 340px) {
   .container {
-    margin-inline: 1rem;
+    margin-inline: 2rem; /* Increased from 1rem to 2rem */
   }
 
   .section__title {
@@ -1572,12 +1848,22 @@ img {
   }
 
   .home__title {
-    font-size: 1.75rem;
+    font-size: 2.2rem; /* Increased from 1.75rem to 2.2rem for bigger text on small devices */
+    padding: 0 0.5rem; /* Added text padding to prevent edge cropping */
+    line-height: 1.1; /* Reduced line height for tighter spacing */
+    margin-bottom: 1rem; /* Added more bottom margin */
+  }
+  
+  /* Add more gap between title lines on small devices */
+  .home__title br {
+    display: block;
+    margin: 0.4rem 0; /* Added gap between lines */
   }
 
   .home__buttons {
     flex-direction: column;
     gap: 1.5rem;
+    width: calc(100% - 2rem); /* Ensure buttons don't touch screen edges */
   }
 
   .about__list {
@@ -1593,6 +1879,7 @@ img {
     flex-direction: column;
     text-align: center;
     gap: 1.5rem;
+    padding: 0 1rem; /* Added padding for mobile info section */
   }
   
   .home__info-title {
@@ -1622,6 +1909,18 @@ img {
   .home__info {
     column-gap: 3rem;
   }
+  
+  /* Medium mobile devices - bigger title */
+  .home__title {
+    font-size: 2.5rem; /* Bigger text for medium mobile devices */
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+  
+  .home__title br {
+    display: block;
+    margin: 0.5rem 0; /* Added gap between lines */
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1644,6 +1943,19 @@ img {
   
   .home__info {
     column-gap: 4rem;
+  }
+
+  /* Increased padding for tablet devices */
+  .container {
+    margin-inline: 1.5rem; /* Increased from default 1rem to 1.5rem */
+  }
+
+  .home__title {
+    padding: 0 0.5rem; /* Added text padding to prevent edge cropping */
+  }
+
+  .home__buttons {
+    width: calc(100% - 2rem); /* Ensure buttons don't touch screen edges */
   }
 }
 
@@ -2313,6 +2625,26 @@ img {
     row-gap: 2rem;
   }
   .home__title {
-    font-size: 2.25rem;
+    font-size: 2.8rem; /* Increased from 2.25rem to 2.8rem for bigger text */
+    line-height: 1.1; /* Reduced line height for tighter spacing */
+    margin-bottom: 1rem; /* Added more bottom margin */
+  }
+  
+  /* Add more gap between title lines on mobile */
+  .home__title br {
+    display: block;
+    margin: 0.5rem 0; /* Added gap between lines */
+  }
+
+  /* Enhanced mobile info section - stack stats vertically with proper spacing */
+  .home__info {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1.5rem 0;
+    text-align: center;
+  }
+
+  .home__info div {
+    padding: 0 1rem; /* Added padding to prevent edge cropping */
   }
 }
