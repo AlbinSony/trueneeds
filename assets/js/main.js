@@ -63,50 +63,16 @@ document.addEventListener('DOMContentLoaded', () => {
   onResize();
 
   /*=============== HEADER BACKGROUND ===============*/
-  const hero = document.getElementById('home');
-  const setHeaderState = (isTransparent) => {
-    if (!header) return;
-    header.classList.toggle('header--transparent', isTransparent);
-    header.classList.toggle('bg-header', !isTransparent);
-  };
-  const updateHeader = () => {
-    if (!hero) {
-      setHeaderState(window.scrollY < 50);
-      return;
-    }
-    const scrolledPastHero = window.scrollY > (hero.offsetHeight - (header?.offsetHeight || 0));
-    setHeaderState(!scrolledPastHero);
-  };
+  // Header is always solid - no transparency functionality needed
   const updateHeaderAndMenu = () => {
-    updateHeader();
     // Ensure the mobile menu never auto-opens on scroll
     if (window.innerWidth <= 1150 && navMenu.classList.contains('show-menu')) {
       navMenu.classList.remove('show-menu');
       document.body.style.overflow = '';
     }
   };
-  // Use IntersectionObserver for more reliable hero detection
-  if ('IntersectionObserver' in window && hero) {
-    const coreValues = document.querySelector('.values');
-    const observer = new IntersectionObserver((entries) => {
-      const heroEntry = entries.find(e => e.target.id === 'home');
-      const valuesEntry = entries.find(e => e.target.classList?.contains('values'));
-      const isHeroVisible = heroEntry ? heroEntry.isIntersecting : false;
-      const isCoreVisible = valuesEntry ? valuesEntry.isIntersecting : false;
-      // In hero → always transparent. In core values → colored. Else → colored if not in hero
-      if (isHeroVisible) {
-        setHeaderState(true);
-      } else if (isCoreVisible) {
-        setHeaderState(false);
-      } else {
-        setHeaderState(false);
-      }
-    }, { root: null, threshold: 0.15 });
-    observer.observe(hero);
-    if (coreValues) observer.observe(coreValues);
-  } else {
-    window.addEventListener('scroll', updateHeaderAndMenu, { passive: true });
-  }
+  
+  // No need for scroll-based header changes since header is always solid
   updateHeaderAndMenu();
 
   // Always ensure mobile menu is closed during any viewport interaction to prevent auto-expansion
@@ -270,6 +236,18 @@ document.addEventListener('DOMContentLoaded', () => {
     delay: 100
   });
   
+  // Enhanced Core Values ScrollReveal for mobile
+  sr.reveal('.values .responsible__stat-item', { 
+    origin: 'bottom', 
+    interval: 200,
+    mobile: true,
+    desktop: true,
+    distance: '40px',
+    duration: 1000,
+    delay: 100,
+    reset: false
+  });
+  
   sr.reveal('.lifecycle__content', { 
     origin: 'bottom', 
     delay: 300,
@@ -431,6 +409,7 @@ document.addEventListener('DOMContentLoaded', () => {
         .section__title,
         .section__subtitle,
         .values__grid,
+        .values .responsible__stat-item,
         .footer__container,
         .footer__content,
         .nav__menu,
@@ -475,6 +454,111 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
+
+  /*=============== CORE VALUES SCROLL EFFECT ===============*/
+  // Enhanced scroll-triggered effect for Core Values section (Desktop + Mobile)
+  let coreValuesObserver = null;
+  let coreValuesItemObservers = [];
+  
+  const initCoreValuesEffect = () => {
+    const coreValuesSection = document.querySelector('.values');
+    const coreValuesItems = document.querySelectorAll('.values .responsible__stat-item');
+    
+    // Clean up existing observers
+    if (coreValuesObserver) {
+      coreValuesObserver.disconnect();
+    }
+    coreValuesItemObservers.forEach(observer => observer.disconnect());
+    coreValuesItemObservers = [];
+    
+    if (coreValuesSection && coreValuesItems.length > 0) {
+      // Mobile-specific settings
+      const isMobile = window.innerWidth <= 768;
+      const threshold = isMobile ? 0.2 : 0.3; // Lower threshold for mobile
+      const rootMargin = isMobile ? '0px 0px -50px 0px' : '0px 0px -100px 0px';
+      const staggerDelay = isMobile ? 150 : 200; // Faster stagger for mobile
+      
+      coreValuesObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            console.log('Core Values section in view - adding scroll effects');
+            
+            // Add scroll-active class to all Core Values items when section is in view
+            coreValuesItems.forEach((item, index) => {
+              // Reset any existing classes first
+              item.classList.remove('scroll-active', 'animate');
+              
+              setTimeout(() => {
+                item.classList.add('scroll-active');
+                if (isMobile) {
+                  item.classList.add('animate');
+                  // Add a more prominent effect for mobile
+                  item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                }
+                console.log(`Core Value item ${index + 1} activated with mobile effect`);
+              }, index * staggerDelay);
+            });
+          } else {
+            // Remove scroll-active class when section is out of view
+            coreValuesItems.forEach(item => {
+              item.classList.remove('scroll-active');
+              if (isMobile) {
+                item.classList.remove('animate');
+                // Reset to initial state
+                item.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+              }
+            });
+          }
+        });
+      }, {
+        threshold: threshold,
+        rootMargin: rootMargin
+      });
+
+      coreValuesObserver.observe(coreValuesSection);
+      
+      // Also add individual item observers for better mobile performance
+      if (isMobile) {
+        coreValuesItems.forEach((item, index) => {
+          const itemObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+              if (entry.isIntersecting) {
+                setTimeout(() => {
+                  entry.target.classList.add('scroll-active', 'animate');
+                  // Enhanced mobile effect
+                  entry.target.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+                  entry.target.style.transform = 'translateY(-8px) scale(1.05)';
+                  entry.target.style.boxShadow = '0 12px 30px rgba(0,0,0,.15), 0 6px 18px rgba(200,16,46,.2)';
+                  entry.target.style.opacity = '1';
+                  console.log(`Individual Core Value item ${index + 1} activated with enhanced mobile effect`);
+                }, index * 100); // Faster individual activation
+              } else {
+                entry.target.classList.remove('scroll-active', 'animate');
+                // Reset to initial state
+                entry.target.style.transform = 'translateY(30px) scale(0.95)';
+                entry.target.style.boxShadow = '0 2px 8px rgba(0,0,0,.1)';
+                entry.target.style.opacity = '0.6';
+              }
+            });
+          }, {
+            threshold: 0.3, // Lower threshold for easier activation
+            rootMargin: '0px 0px -30px 0px'
+          });
+          
+          itemObserver.observe(item);
+          coreValuesItemObservers.push(itemObserver);
+        });
+      }
+    }
+  };
+  
+  // Initialize Core Values effect
+  initCoreValuesEffect();
+  
+  // Reinitialize on window resize
+  window.addEventListener('resize', () => {
+    initCoreValuesEffect();
+  });
 
   /*=============== ENHANCED MOBILE INTERACTIONS ===============*/
   // Add touch-friendly interactions for mobile
