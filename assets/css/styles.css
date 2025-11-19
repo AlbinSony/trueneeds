@@ -1923,13 +1923,43 @@ img {
 
 /* For Medium Devices */
 @media screen and (min-width: 540px) {
-  .home__container,
-  .about__container,
-  .services__container,
-  .projects__container,
-  .contact__container {
-    grid-template-columns: 360px;
+  .container {
+    margin-inline: auto;
+  }
+
+  .section {
+    padding-block: 7rem 2rem;
+  }
+
+  /* Center home section vertically and horizontally on desktop */
+  .home__container {
+    display: flex;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    min-height: 78vh;
+    height: 78vh;
+    width: 100%;
+  }
+  .home__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .home__data {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  .home__info {
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+  }
   }
 
   .footer__content {
