@@ -51,6 +51,10 @@
             </li>
 
             <li>
+              <a href="gallery.html" class="nav__link">Gallery</a>
+            </li>
+
+            <li>
               <a href="#contact" class="nav__link button">Contact</a>
             </li>
           </ul>
@@ -122,22 +126,55 @@
       <section class="values section">
         <div class="responsible__stats container">
           <h3 class="responsible__stats-title">Our Core Values</h3>
-          <div class="responsible__stats-grid values__grid">
-            <div class="responsible__stat-item">
+          <div class="responsible__stats-grid values__grid" id="core-values-grid">
+            <div class="responsible__stat-item" data-value="sustainability">
               <span class="responsible__stat-number">01</span>
-              <p class="responsible__stat-text">SUSTAINABLE DEVELOPMENT</p>
+              <p class="responsible__stat-text">SUSTAINABILITY</p>
+              <div class="core-value-detail" style="display:none">
+                We are unwavering in our commitment to environmentally responsible practices, integrating sustainable solutions into every project to minimize our ecological footprint.
+              </div>
             </div>
-            <div class="responsible__stat-item">
+            <div class="responsible__stat-item" data-value="integrity">
               <span class="responsible__stat-number">02</span>
-              <p class="responsible__stat-text">QUALITY GUARANTEED</p>
+              <p class="responsible__stat-text">INTEGRITY</p>
+              <div class="core-value-detail" style="display:none">
+                Our foundation is built on honesty, transparency, and ethical conduct. We prioritize integrity in all our interactions, ensuring trust and respect with clients, partners, and stakeholders.
+              </div>
             </div>
-            <div class="responsible__stat-item">
+            <div class="responsible__stat-item" data-value="innovation">
               <span class="responsible__stat-number">03</span>
-              <p class="responsible__stat-text">INNOVATION WITH INTEGRITY</p>
+              <p class="responsible__stat-text">INNOVATION</p>
+              <div class="core-value-detail" style="display:none">
+                Embracing forward-thinking and cutting-edge technologies, we strive to pioneer innovative solutions that redefine industry standards and push the boundaries of what is possible in construction.
+              </div>
             </div>
-            <div class="responsible__stat-item">
+            <div class="responsible__stat-item" data-value="excellence">
               <span class="responsible__stat-number">04</span>
-              <p class="responsible__stat-text">CONSCIENTIOUS CRAFTSMANSHIP</p>
+              <p class="responsible__stat-text">EXCELLENCE</p>
+              <div class="core-value-detail" style="display:none">
+                We relentlessly pursue excellence in craftsmanship and project execution. From concept to completion, we aim for the highest standards of quality and precision in every endeavor.
+              </div>
+            </div>
+            <div class="responsible__stat-item" data-value="client">
+              <span class="responsible__stat-number">05</span>
+              <p class="responsible__stat-text">CLIENT-CENTRIC APPROACH</p>
+              <div class="core-value-detail" style="display:none">
+                Our clients are at the heart of everything we do. We prioritize understanding their needs, delivering personalized solutions, and exceeding expectations to foster long-term relationships.
+              </div>
+            </div>
+            <div class="responsible__stat-item" data-value="team">
+              <span class="responsible__stat-number">06</span>
+              <p class="responsible__stat-text">TEAM COLLABORATION</p>
+              <div class="core-value-detail" style="display:none">
+                We foster a culture of collaboration and teamwork, recognizing that the collective expertise of our diverse team is key to overcoming challenges and achieving success.
+              </div>
+            </div>
+            <div class="responsible__stat-item" data-value="community">
+              <span class="responsible__stat-number">07</span>
+              <p class="responsible__stat-text">COMMUNITY IMPACT</p>
+              <div class="core-value-detail" style="display:none">
+                Beyond construction, we actively contribute to the well-being of the communities we serve. We believe in giving back and creating a positive impact on society.
+              </div>
             </div>
           </div>
         </div>
@@ -151,13 +188,20 @@
             <h2 class="section__title">
               The Responsible Builders in Kerala
             </h2>
-            <p class="responsible__description">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
-            <p class="responsible__description">
-              Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-            </p>
-            <a href="#about" class="button">Know More About True Needs</a>
+            <div class="responsible__mission">
+              
+              <p style="margin-bottom:1.5rem;line-height:1.7;text-align:justify;">At True Needs Sustainable Developers Pvt. Ltd., Our mission is to revolutionize 
+the construction landscape by seamlessly integrating sustainability into every 
+facet of our work. Committed to delivering unparalleled quality, we strive to 
+create spaces that not only meet the present needs but also contribute positively 
+to the future. Our mission is rooted in a dedication to eco-conscious practices, 
+cutting-edge innovation, and client satisfaction. True to our name, we seek to be 
+the catalysts for positive change, setting new standards in the industry and 
+building a legacy of sustainable development that stands as a testament to our 
+unwavering commitment to the planet and its inhabitants.</p>
+            </div>
+            
+            <a href="assets\pdf\TRUE NEEDS BROCHURE .pdf" class="button" target="_blank">Know More About True Needs</a>
           </div>
           
           <div class="responsible__stats">
@@ -255,7 +299,7 @@
             <div class="corporate-video__text">
               <h2 class="corporate-video__title">Responsibly Yours!</h2>
               <p class="corporate-video__subtitle">Corporate Video</p>
-              <a href="#" class="button corporate-video__button">View Gallery</a>
+              <a href="gallery.html" class="button corporate-video__button">View Gallery</a>
             </div>
             <div class="corporate-video__image">
               <img src="assets/img/about-img-1.png" alt="Corporate Video" class="corporate-video__img">
@@ -272,6 +316,7 @@
         <div class="about__container container grid">
           <div class="about__data">
             <span class="section__subtitle">WHO WE ARE ?</span>
+
             <h2 class="section__title glitch-text" data-text="EXPLORE THE EXCELLENCE">
               EXPLORE THE EXCELLENCE <br />
               OF TRUE NEEDS
@@ -351,7 +396,7 @@
             </article>
 
             <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-office-building-line"></i></div>
+              <div class="services__icon"><i class="ri-briefcase-4-line"></i></div>
               <h3 class="services__title">Commercial <br />Projects</h3>
               <p>Delivering innovative solutions for commercial spaces with tailored designs to enhance productivity and create distinctive environments.</p>
             </article>
@@ -360,6 +405,31 @@
               <div class="services__icon"><i class="ri-tools-line"></i></div>
               <h3 class="services__title">Renovation & <br />Remodeling</h3>
               <p>Transforming existing spaces with thoughtful renovations, upgrading structures to meet modern standards while preserving character.</p>
+            </article>
+
+            <!-- New Service Cards -->
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-road-map-line"></i></div>
+              <h3 class="services__title">Infrastructure Development</h3>
+              <p>Contributing to the development of essential public infrastructure. Expertise in the construction of roads, bridges, and utility installations.</p>
+            </article>
+
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-briefcase-line"></i></div>
+              <h3 class="services__title">Project Management</h3>
+              <p>Providing end-to-end project management services. Ensuring timely completion, budget adherence, and quality control.</p>
+            </article>
+
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-lightbulb-line"></i></div>
+              <h3 class="services__title">Consulting Services</h3>
+              <p>Offering expert consultancy on sustainable construction practices. Advising on eco-friendly building materials and energy-efficient designs.</p>
+            </article>
+
+            <article class="services__card hover-raise tilt shine">
+              <div class="services__icon"><i class="ri-home-gear-line"></i></div>
+              <h3 class="services__title">Interior Design and Fit-Outs</h3>
+              <p>Creating aesthetically pleasing and functional interior spaces. Tailored solutions to align with client preferences and brand identity.</p>
             </article>
           </div>
         </div>
@@ -641,7 +711,6 @@
                 <div class="contact__icon">
                   <i class="ri-map-pin-2-line"></i>
                 </div>
-
                 <h3 class="contact__title">Address</h3>
                 <address class="contact__info">
                   Periyankavala | Swaraj<br />
@@ -654,7 +723,6 @@
                 <div class="contact__icon">
                   <i class="ri-phone-line"></i>
                 </div>
-
                 <h3 class="contact__title">Phone</h3>
                 <address class="contact__info">
                   +91 7012572979 <br />
@@ -666,7 +734,6 @@
                 <div class="contact__icon">
                   <i class="ri-mail-line"></i>
                 </div>
-
                 <h3 class="contact__title">Email</h3>
                 <address class="contact__info">
                   trueneedssustainable<br />
@@ -678,23 +745,21 @@
                 <div class="contact__icon">
                   <i class="ri-message-3-line"></i>
                 </div>
-
                 <h3 class="contact__title">Messaging</h3>
                 <div class="contact__social">
                   <a
-                    href="https://api.whatsapp.com/send?phone=917012572979&text=Hello, need more information!"
+                    href="https://api.whatsapp.com/send?phone=918139852226&text=Hello%2C%20I%20have%20an%20enquiry%20about%20True%20Needs"
                     target="_blank"
+                    rel="noopener noreferrer"
                     class="contact__social-link">
                     <i class="ri-whatsapp-line"></i>
                   </a>
-
                   <a
                     href="https://www.messenger.com/"
                     target="_blank"
                     class="contact__social-link">
                     <i class="ri-messenger-line"></i>
                   </a>
-
                   <a
                     href="https://telegram.org/"
                     target="_blank"
@@ -702,6 +767,16 @@
                     <i class="ri-telegram-line"></i>
                   </a>
                 </div>
+              </div>
+
+              <div class="contact__card">
+                <div class="contact__icon">
+                  <i class="ri-briefcase-line"></i>
+                </div>
+                <h3 class="contact__title">For<br />Vacancies</h3>
+                <address class="contact__info">
+                  future.trueneeds.in<br />@gmail.com
+                </address>
               </div>
             </div>
           </div>
@@ -776,7 +851,7 @@
               ></a>
 
               <a
-                href="https://www.instagram.com/"
+                href="https://www.instagram.com/true.needs?igsh=dTQwZjQzY25qamF1"
                 target="-blanck"
                 class="footer__social-link"
                 ><i class="ri-instagram-line"></i

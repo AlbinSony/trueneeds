@@ -1,4 +1,26 @@
 document.addEventListener('DOMContentLoaded', () => {
+    /*=============== CORE VALUES INTERACTIVITY ===============*/
+    const coreValuesGrid = document.getElementById('core-values-grid');
+    if (coreValuesGrid) {
+      coreValuesGrid.addEventListener('click', function(e) {
+        let item = e.target.closest('.responsible__stat-item');
+        if (!item) return;
+        // Hide all details first
+        coreValuesGrid.querySelectorAll('.core-value-detail').forEach(detail => {
+          detail.style.display = 'none';
+        });
+        // Remove active class from all
+        coreValuesGrid.querySelectorAll('.responsible__stat-item').forEach(card => {
+          card.classList.remove('active');
+        });
+        // Show clicked item's detail
+        let detail = item.querySelector('.core-value-detail');
+        if (detail) {
+          detail.style.display = 'block';
+          item.classList.add('active');
+        }
+      });
+    }
   /*=============== DOM ELEMENTS ===============*/
   const navMenu = document.getElementById('nav-menu');
   const navToggle = document.getElementById('nav-toggle');
