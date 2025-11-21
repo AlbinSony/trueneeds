@@ -1,3 +1,8 @@
+/* Fix overlapping email in contact card */
+.contact__card .contact__info {
+  word-break: break-all;
+  padding: 0.5rem 0;
+}
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap");
@@ -1392,11 +1397,39 @@ img {
 
 .services--grid .services__grid,
 .services--elegant .services__grid,
+
 .services--ladder .services__grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  gap: 2rem;
 }
+
+/* Ensure all service cards are the same size and aligned */
+.services__card {
+  min-height: 340px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 1024px) {
+  .services--ladder .services__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .services--ladder .services__grid {
+    grid-template-columns: 1fr;
+  }
+  .services__card {
+    min-height: 280px;
+  }
+}
+
 
 .services--grid .services__card {
   width: 100%;
@@ -1931,6 +1964,39 @@ img {
     padding-block: 7rem 2rem;
   }
 
+  /* Properly align Who We Are section (about) */
+  .about__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+  }
+  .about__data {
+    text-align: left;
+    max-width: 100%;
+    margin: 0;
+  }
+  .about__images {
+    justify-self: end;
+    margin: 0;
+    position: relative;
+    z-index: 1;
+  }
+  .about__description {
+    margin-top: 1.5rem;
+    margin-bottom: 2rem;
+    font-size: 1.08rem;
+    line-height: 1.7;
+    color: var(--text-color);
+    background: none;
+    position: relative;
+    z-index: 2;
+  }
+
   /* Center home section vertically and horizontally on desktop */
   .home__container {
     display: flex;
@@ -1981,7 +2047,7 @@ img {
     display: block;
     margin: 0.5rem 0; /* Added gap between lines */
   }
-}
+
 
 @media screen and (min-width: 768px) {
   .nav__menu {
