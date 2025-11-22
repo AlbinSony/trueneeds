@@ -10,17 +10,17 @@
 :root {
   --header-height: 3.5rem;
 
-  /* Design System Colors */
-  --primary-color: #ffffff;
-  --secondary-color: #000000;
-  --accent-color: #c8102e;
-  --background-light: #f8f8f8;
-  --background-dark: #1a1a1a;
-  --text-primary: #1a1a1a;
-  --text-secondary: #666666;
-  --muted: #e6e6e6;
-  --accent-hover: #a10d23;
-  --border-light: #e0e0e0;
+  /* NEW Design System Colors */
+  --primary-color: #E6E6E6; /* New background color */
+  --secondary-color: #45506C; /* New dark blue */
+  --accent-color: #85A751; /* New green accent */
+  --background-light: #E6E6E6; /* Light gray background */
+  --background-dark: #45506C; /* Dark blue background */
+  --text-primary: #45506C; /* Dark blue text */
+  --text-secondary: #6b7280; /* Medium gray text */
+  --muted: #d1d5db; /* Muted gray */
+  --accent-hover: #6d8a41; /* Darker green for hover */
+  --border-light: #d1d5db; /* Light border */
   
   /* Legacy color mappings for compatibility */
   --first-color: var(--accent-color);
@@ -31,8 +31,8 @@
   --text-color: var(--text-primary);
   --text-color-light: var(--text-secondary);
   --body-color: var(--background-light);
-  --container-color: var(--primary-color);
-  --white-color: var(--primary-color);
+  --container-color: #ffffff; /* White for cards */
+  --white-color: #ffffff;
   --black-color: var(--text-primary);
   --gray-border: var(--border-light);
   --black-border: var(--text-primary);
@@ -43,13 +43,13 @@
   --body-font: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   
   /* Font sizes matching design system (16px base) */
-  --big-font-size: 3rem; /* ~48px for h1 */
-  --h1-font-size: 3rem; /* 48px */
-  --h2-font-size: 2.25rem; /* 36px */
-  --h3-font-size: 1.75rem; /* 28px */
-  --h4-font-size: 1.375rem; /* 22px */
-  --normal-font-size: 1rem; /* 16px base */
-  --small-font-size: 0.875rem; /* 14px */
+  --big-font-size: 3rem;
+  --h1-font-size: 3rem;
+  --h2-font-size: 2.25rem;
+  --h3-font-size: 1.75rem;
+  --h4-font-size: 1.375rem;
+  --normal-font-size: 1rem;
+  --small-font-size: 0.875rem;
 
   /* Font weights */
   --font-light: 300;
@@ -59,16 +59,16 @@
   --font-bold: 700;
 
   /* Spacing system */
-  --spacing-xs: 0.25rem; /* 4px */
-  --spacing-sm: 0.5rem; /* 8px */
-  --spacing-md: 1rem; /* 16px */
-  --spacing-lg: 1.5rem; /* 24px */
-  --spacing-xl: 3rem; /* 48px */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 3rem;
 
   /* Border radius */
-  --radius-small: 0.25rem; /* 4px */
-  --radius-medium: 0.5rem; /* 8px */
-  --radius-large: 0.75rem; /* 12px */
+  --radius-small: 0.25rem;
+  --radius-medium: 0.5rem;
+  --radius-large: 0.75rem;
 
   /* Animation variables */
   --transition-fast: 0.15s ease;
@@ -76,10 +76,10 @@
   --transition-bounce: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   
   /* Shadows */
-  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-sm: 0 1px 2px 0 rgba(69, 80, 108, 0.05);
+  --shadow-md: 0 4px 6px -1px rgba(69, 80, 108, 0.1), 0 2px 4px -1px rgba(69, 80, 108, 0.06);
+  --shadow-lg: 0 10px 15px -3px rgba(69, 80, 108, 0.1), 0 4px 6px -2px rgba(69, 80, 108, 0.05);
+  --shadow-xl: 0 20px 25px -5px rgba(69, 80, 108, 0.1), 0 10px 10px -5px rgba(69, 80, 108, 0.04);
 
   --z-tooltip: 10;
   --z-fixed: 100;
@@ -548,8 +548,8 @@ img {
   left: 0;
   background-color: rgba(255, 255, 255, 0.98);
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(69, 80, 108, 0.1);
+  border-bottom: 1px solid rgba(69, 80, 108, 0.1);
   z-index: var(--z-fixed);
   transition: var(--transition-smooth);
 }
@@ -703,8 +703,8 @@ img {
 .header {
   background-color: rgba(255, 255, 255, 0.98) !important;
   backdrop-filter: blur(20px);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 20px rgba(69, 80, 108, 0.1);
+  border-bottom: 1px solid rgba(69, 80, 108, 0.1);
 }
 
 /* Ensure all navbar elements are visible with solid background */
@@ -943,10 +943,10 @@ img {
 .home__divider {
   width: 90px;
   height: 4px;
-  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover));
+  background: linear-gradient(90deg, var(--accent-color), var(--accent-hover)); /* Green gradient */
   margin: 0.5rem auto 1rem;
   border-radius: 99px;
-  filter: drop-shadow(0 4px 14px rgba(200,16,46,.4));
+  filter: drop-shadow(0 4px 14px rgba(133, 167, 81, 0.4));
 }
 
 .nowrap { 
@@ -1034,7 +1034,7 @@ img {
 }
 
 .home__info-title {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green info titles */
   font-family: var(--header-font);
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
@@ -1214,7 +1214,7 @@ img {
 
 .about__list-item i {
   font-size: 1.25rem;
-  color: var(--first-color);
+  color: var(--first-color); /* Green checkmark icons */
 }
 
 .about__list-item span {
@@ -1313,7 +1313,7 @@ img {
 .services__icon {
   width: 80px;
   height: 80px;
-  background: linear-gradient(135deg, var(--first-color), var(--accent-hover));
+  background: linear-gradient(135deg, var(--first-color), var(--accent-hover)); /* Green gradient */
   color: var(--white-color);
   border-radius: 50%;
   display: grid;
@@ -1380,7 +1380,7 @@ img {
   position: absolute;
   width: 100%;
   height: 245px;
-  background: var(--first-color);
+  background: var(--secondary-color); /* Dark blue shape */
   bottom: -0.675rem;
   left: 0;
   z-index: -1;
@@ -1549,7 +1549,7 @@ img {
 
 /*=============== PROJECTS ===============*/
 .projects {
-  background-color: var(--first-color);
+  background-color: var(--secondary-color); /* Dark blue background */
 }
 
 .projects .section__title {
@@ -1557,7 +1557,7 @@ img {
 }
 
 .projects .section__subtitle {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green subtitle */
 }
 
 .projects__container {
@@ -1737,7 +1737,7 @@ img {
 .contact__icon {
   width: 48px;
   height: 48px;
-  background-color: var(--first-color);
+  background-color: var(--first-color); /* Green icon background */
   color: var(--white-color);
   border-radius: 50%;
   display: grid;
@@ -1770,7 +1770,7 @@ img {
 
 .contact__social-link {
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green social links */
   transition: transform 0.4s;
 }
 
@@ -1781,7 +1781,7 @@ img {
 
 /*=============== FOOTER ===============*/
 .footer {
-  background: linear-gradient(135deg, var(--background-dark) 0%, rgba(26, 26, 26, 0.95) 100%);
+  background: linear-gradient(135deg, var(--background-dark) 0%, rgba(69, 80, 108, 0.95) 100%); /* Dark blue gradient */
   color: var(--text-color-light);
   padding-block: 3.5rem 2rem;
   position: relative;
@@ -1822,7 +1822,7 @@ img {
 }
 
 .footer__logo i {
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green icon */
   font-size: 1.5rem;
 }
 
@@ -1836,7 +1836,7 @@ img {
 
 .footer__email {
   font-style: normal;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green email */
   font-family: var(--body-font);
   font-weight: var(--font-regular);
 }
@@ -1887,7 +1887,7 @@ img {
 
 .footer__social-link {
   font-size: 1.5rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green social icons */
   transition: transform 0.4s;
 }
 
@@ -2476,13 +2476,13 @@ img {
 
 .responsible__stat-number {
   display: block;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green numbers */
   font-family: var(--header-font);
   font-size: 3rem;
   font-weight: var(--font-bold);
   margin-bottom: 0.5rem;
   line-height: 1;
-  filter: drop-shadow(0 2px 6px rgba(200,16,46,.15));
+  filter: drop-shadow(0 2px 6px rgba(133, 167, 81, 0.15));
 }
 
 .responsible__stat-text {
@@ -2524,7 +2524,7 @@ img {
   transform: translateX(-50%);
   width: 60px;
   height: 2px;
-  background: linear-gradient(90deg, transparent, var(--accent-color), transparent);
+  background: linear-gradient(90deg, transparent, var(--accent-color), transparent); /* Green gradient */
   opacity: .25;
 }
 
@@ -2580,7 +2580,7 @@ img {
 
 /*=============== LIFECYCLE BANNER ===============*/
 .lifecycle {
-  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover));
+  background: linear-gradient(135deg, var(--accent-color), var(--accent-hover)); /* Green gradient */
   padding: 4rem 0;
   color: var(--white-color);
 }
@@ -2707,7 +2707,7 @@ img {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green button */
   font-family: var(--subheading-font);
   font-weight: var(--font-semi-bold);
   font-size: var(--small-font-size);
@@ -2723,23 +2723,16 @@ img {
 
 /*=============== CORPORATE VIDEO ===============*/
 .corporate-video {
-  background: linear-gradient(135deg, var(--background-dark), rgba(26, 26, 26, 0.95));
+  background: linear-gradient(135deg, var(--background-dark), rgba(69, 80, 108, 0.95)); /* Dark blue background */
   color: var(--white-color);
   padding: 6rem 0;
-}
-
-.corporate-video__content {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 4rem;
-  align-items: center;
 }
 
 .corporate-video__title {
   font-family: var(--header-font);
   font-size: var(--h1-font-size);
   font-weight: var(--font-bold);
-  color: var(--accent-color);
+  color: var(--accent-color); /* Green title */
   margin-bottom: 0.5rem;
   line-height: 1.2;
 }
@@ -2774,7 +2767,7 @@ img {
   transform: translate(-50%, -50%);
   width: 80px;
   height: 80px;
-  background: rgba(200, 16, 46, 0.9);
+  background: rgba(133, 167, 81, 0.9); /* Green play button */
   border-radius: 50%;
   display: flex;
   align-items: center;
