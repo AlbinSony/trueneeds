@@ -851,6 +851,7 @@
       /* Enhanced Projects Card Data Styles */
       .projects__data {
         padding: 1.5rem;
+        background: white; /* Ensure white background for content area */
       }
 
       .projects__meta {
@@ -918,8 +919,20 @@
 
       /* Responsive Design for Project Cards */
       @media screen and (max-width: 768px) {
+        .projects__card.enhanced {
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto;
+          background: white; /* Force white background */
+        }
+
+        .projects__card-header {
+          height: 200px;
+        }
+
         .projects__data {
-          padding: 1.2rem;
+          padding: 1.5rem 1.2rem;
+          background: white; /* Ensure white background */
         }
 
         .projects__meta {
@@ -929,8 +942,28 @@
           margin-bottom: 1rem;
         }
 
+        .projects__category {
+          background: var(--first-color);
+          color: white;
+          padding: 0.5rem 1rem;
+          font-size: 0.75rem;
+        }
+
+        .projects__date {
+          color: #666;
+          font-size: 0.85rem;
+        }
+
         .projects__title {
-          font-size: 1.2rem;
+          font-size: 1.25rem;
+          color: #1a1a1a;
+          font-weight: 700;
+        }
+
+        .projects__description {
+          color: #333;
+          font-size: 0.95rem;
+          line-height: 1.6;
         }
 
         .projects__stats {
@@ -940,17 +973,214 @@
       }
 
       @media screen and (max-width: 480px) {
+        .projects__card.enhanced {
+          background: white;
+        }
+
+        .projects__card-header {
+          height: 180px;
+        }
+
+        .projects__data {
+          padding: 1.2rem 1rem;
+          background: white;
+        }
+
         .projects__category {
-          padding: 0.3rem 0.8rem;
-          font-size: 0.75rem;
+          padding: 0.4rem 0.9rem;
+          font-size: 0.7rem;
+          background: var(--first-color);
+          color: white;
+        }
+
+        .projects__date {
+          font-size: 0.8rem;
+          color: #666;
         }
 
         .projects__title {
-          font-size: 1.1rem;
+          font-size: 1.15rem;
+          color: #1a1a1a;
+          margin-bottom: 0.6rem;
         }
 
         .projects__description {
           font-size: 0.9rem;
+          color: #333;
+          line-height: 1.5;
+        }
+
+        .media-btn {
+          padding: 0.6rem 1rem;
+          font-size: 0.85rem;
+        }
+      }
+
+      /* Fix Projects Section for Mobile - CRITICAL FIX */
+      .projects.section {
+        background-color: var(--first-color);
+        padding: 3rem 0;
+        min-height: auto;
+      }
+
+      .projects__container {
+        padding: 0 1rem;
+        display: grid !important;
+        grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+        gap: 2rem;
+        justify-items: center;
+      }
+
+      /* Desktop card styling - restore original */
+      @media screen and (min-width: 769px) {
+        .projects__container {
+          grid-template-columns: repeat(3, 350px) !important;
+          gap: 2rem !important;
+          padding: 2rem 1rem !important;
+          justify-content: center;
+        }
+
+        .projects__card.enhanced {
+          width: 350px;
+          max-width: 350px;
+        }
+
+        .projects__card-header {
+          height: 250px;
+        }
+      }
+
+      /* Mobile Responsive Fixes - OVERRIDE ALL ANIMATIONS */
+      @media screen and (max-width: 768px) {
+        .projects.section {
+          padding: 2rem 0.5rem;
+          background-color: var(--first-color);
+        }
+
+        .projects__container {
+          grid-template-columns: 1fr !important;
+          gap: 2rem !important;
+          padding: 1rem !important;
+          max-width: 100%;
+          display: grid !important;
+        }
+
+        /* Force cards to be visible */
+        .projects__card,
+        .projects__card.enhanced,
+        .projects__card.animate {
+          display: block !important;
+          visibility: visible !important;
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+          width: 100%;
+          max-width: 100%;
+          margin: 0 auto 2rem auto;
+          background: white !important;
+        }
+
+        .projects__card-header {
+          height: 200px;
+          display: block;
+        }
+
+        .projects__img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .projects__data {
+          padding: 1.5rem 1.2rem;
+          background: white !important;
+          display: block;
+        }
+
+        .projects__meta {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 0.8rem;
+          margin-bottom: 1rem;
+        }
+
+        .projects__category {
+          background: var(--first-color) !important;
+          color: white !important;
+          padding: 0.5rem 1rem;
+          font-size: 0.75rem;
+          display: inline-block;
+        }
+
+        .projects__date {
+          color: #666 !important;
+          font-size: 0.85rem;
+          display: block;
+        }
+
+        .projects__title {
+          font-size: 1.25rem !important;
+          color: #1a1a1a !important;
+          font-weight: 700;
+          display: block;
+          margin-bottom: 0.8rem;
+        }
+
+        .projects__description {
+          color: #333 !important;
+          font-size: 0.95rem;
+          line-height: 1.6;
+          display: block;
+        }
+
+        .projects__stats {
+          flex-direction: column;
+          gap: 0.8rem;
+        }
+      }
+
+      @media screen and (max-width: 480px) {
+        .projects.section {
+          padding: 1.5rem 0.25rem;
+        }
+
+        .projects__container {
+          padding: 0.75rem !important;
+          gap: 1.5rem !important;
+        }
+
+        .projects__card,
+        .projects__card.enhanced {
+          margin-bottom: 1.5rem;
+        }
+
+        .projects__card-header {
+          height: 180px;
+        }
+
+        .projects__data {
+          padding: 1.2rem 1rem;
+        }
+
+        .projects__category {
+          padding: 0.4rem 0.9rem;
+          font-size: 0.7rem;
+        }
+
+        .projects__date {
+          font-size: 0.8rem;
+        }
+
+        .projects__title {
+          font-size: 1.15rem !important;
+          margin-bottom: 0.6rem;
+        }
+
+        .projects__description {
+          font-size: 0.9rem;
+          line-height: 1.5;
         }
       }
 
