@@ -1,5 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html     <!--=============== SWIPER CSS ===============-->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+
+    <!--=============== PAGE SPECIFIC CSS ===============-->
+    <link rel="stylesheet" href="assets/css/page-specific.css" />
+
+    <!--=============== MAIN CSS ===============-->
+    <link rel="stylesheet" href="assets/css/styles.css" />"en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -15,6 +22,11 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
 
+    <!--=============== FONT AWESOME ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
@@ -28,8 +40,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="#" class="nav__logo">
-          <img src="assets/img/Untitled-1 [Recovered]-01.png" alt="True Needs Logo" style="height:6.0rem;vertical-align:middle;margin-right:1.0rem;">
-          
+          <img src="assets/img/Untitled-1 [Recovered]-01.png" alt="True Needs Logo" class="header__logo-img">
         </a>
 
         <div class="nav__menu" id="nav-menu">
@@ -94,10 +105,8 @@
               <div class="home__divider"></div>
 
               <div class="home__buttons animate-fadeInUp">
-                <a href="#services" class="button">Our Services</a>
-
-                <a href="#projects" class="button__link button__link--small">
-                  <span>View Projects</span>
+                <a href="#projects" class="button">
+                  View Projects
                   <i class="ri-arrow-right-line"></i>
                 </a>
               </div>
@@ -127,55 +136,7 @@
         <div class="responsible__stats container">
           <h3 class="responsible__stats-title">Our Core Values</h3>
           <div class="responsible__stats-grid values__grid" id="core-values-grid">
-            <div class="responsible__stat-item" data-value="sustainability">
-              <span class="responsible__stat-number">01</span>
-              <p class="responsible__stat-text">SUSTAINABILITY</p>
-              <div class="core-value-detail" style="display:none">
-                We are unwavering in our commitment to environmentally responsible practices, integrating sustainable solutions into every project to minimize our ecological footprint.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="integrity">
-              <span class="responsible__stat-number">02</span>
-              <p class="responsible__stat-text">INTEGRITY</p>
-              <div class="core-value-detail" style="display:none">
-                Our foundation is built on honesty, transparency, and ethical conduct. We prioritize integrity in all our interactions, ensuring trust and respect with clients, partners, and stakeholders.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="innovation">
-              <span class="responsible__stat-number">03</span>
-              <p class="responsible__stat-text">INNOVATION</p>
-              <div class="core-value-detail" style="display:none">
-                Embracing forward-thinking and cutting-edge technologies, we strive to pioneer innovative solutions that redefine industry standards and push the boundaries of what is possible in construction.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="excellence">
-              <span class="responsible__stat-number">04</span>
-              <p class="responsible__stat-text">EXCELLENCE</p>
-              <div class="core-value-detail" style="display:none">
-                We relentlessly pursue excellence in craftsmanship and project execution. From concept to completion, we aim for the highest standards of quality and precision in every endeavor.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="client">
-              <span class="responsible__stat-number">05</span>
-              <p class="responsible__stat-text">CLIENT-CENTRIC APPROACH</p>
-              <div class="core-value-detail" style="display:none">
-                Our clients are at the heart of everything we do. We prioritize understanding their needs, delivering personalized solutions, and exceeding expectations to foster long-term relationships.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="team">
-              <span class="responsible__stat-number">06</span>
-              <p class="responsible__stat-text">TEAM COLLABORATION</p>
-              <div class="core-value-detail" style="display:none">
-                We foster a culture of collaboration and teamwork, recognizing that the collective expertise of our diverse team is key to overcoming challenges and achieving success.
-              </div>
-            </div>
-            <div class="responsible__stat-item" data-value="community">
-              <span class="responsible__stat-number">07</span>
-              <p class="responsible__stat-text">COMMUNITY IMPACT</p>
-              <div class="core-value-detail" style="display:none">
-                Beyond construction, we actively contribute to the well-being of the communities we serve. We believe in giving back and creating a positive impact on society.
-              </div>
-            </div>
+            <!-- Core values will be dynamically loaded from data.js -->
           </div>
         </div>
       </section>
@@ -190,39 +151,16 @@
             </h2>
             <div class="responsible__mission">
               
-              <p style="margin-bottom:1.5rem;line-height:1.7;text-align:justify;">At True Needs Sustainable Developers Pvt. Ltd., Our mission is to revolutionize 
-the construction landscape by seamlessly integrating sustainability into every 
-facet of our work. Committed to delivering unparalleled quality, we strive to 
-create spaces that not only meet the present needs but also contribute positively 
-to the future. Our mission is rooted in a dedication to eco-conscious practices, 
-cutting-edge innovation, and client satisfaction. True to our name, we seek to be 
-the catalysts for positive change, setting new standards in the industry and 
-building a legacy of sustainable development that stands as a testament to our 
-unwavering commitment to the planet and its inhabitants.</p>
+              <p class="about__mission-text">At True Needs Sustainable Developers Pvt. Ltd., we revolutionize construction by seamlessly integrating sustainability into every project. Committed to delivering exceptional quality, we create spaces that meet today's needs while contributing positively to tomorrow. Through eco-conscious practices, cutting-edge innovation, and unwavering client satisfaction, we set new industry standards and build a legacy of sustainable development.</p>
             </div>
             
-            <a href="assets\pdf\TRUE NEEDS BROCHURE .pdf" class="button" target="_blank">Know More About True Needs</a>
+            <a href="https://wa.me/+919747775150" class="button" target="_blank">Know More About True Needs</a>
           </div>
           
           <div class="responsible__stats">
             <h3 class="responsible__stats-title">What Makes Us Unique</h3>
-            <div class="responsible__stats-grid">
-              <div class="responsible__stat-item">
-                <span class="responsible__stat-number">01</span>
-                <p class="responsible__stat-text">SUSTAINABLE<br>LIFECYCLE BUILDER</p>
-              </div>
-              <div class="responsible__stat-item">
-                <span class="responsible__stat-number">90</span>
-                <p class="responsible__stat-text">DELIVERED<br>90 PROJECTS</p>
-              </div>
-              <div class="responsible__stat-item">
-                <span class="responsible__stat-number">120</span>
-                <p class="responsible__stat-text">PROJECTS ACROSS KERALA<br>IN 10 CITIES</p>
-              </div>
-              <div class="responsible__stat-item">
-                <span class="responsible__stat-number">8K+</span>
-                <p class="responsible__stat-text">OVER 8000+ SATISFIED<br>CUSTOMERS GLOBALLY</p>
-              </div>
+            <div class="responsible__stats-grid" id="unique-stats">
+              <!-- Stats will be dynamically loaded from data.js -->
             </div>
           </div>
         </div>
@@ -230,11 +168,52 @@ unwavering commitment to the planet and its inhabitants.</p>
 
       <!--==================== LIFECYCLE BANNER ====================-->
       <section class="lifecycle section">
+        <!-- Animated Construction & Sustainability Elements -->
+        <div class="hero-animations">
+          <!-- Floating construction icons -->
+          <div class="floating-icon floating-icon-1">
+            <i class="fa-solid fa-helmet-safety"></i>
+          </div>
+          <div class="floating-icon floating-icon-2">
+            <i class="fa-solid fa-building"></i>
+          </div>
+          <div class="floating-icon floating-icon-3">
+            <i class="fa-solid fa-hammer"></i>
+          </div>
+          <div class="floating-icon floating-icon-4">
+            <i class="fa-solid fa-tree"></i>
+          </div>
+          <div class="floating-icon floating-icon-5">
+            <i class="fa-solid fa-leaf"></i>
+          </div>
+          <div class="floating-icon floating-icon-6">
+            <i class="fa-solid fa-solar-panel"></i>
+          </div>
+          <div class="floating-icon floating-icon-7">
+            <i class="fa-solid fa-recycle"></i>
+          </div>
+          <div class="floating-icon floating-icon-8">
+            <i class="fa-solid fa-seedling"></i>
+          </div>
+
+          <!-- Animated particles -->
+          <div class="particle particle-1"></div>
+          <div class="particle particle-2"></div>
+          <div class="particle particle-3"></div>
+          <div class="particle particle-4"></div>
+          <div class="particle particle-5"></div>
+          <div class="particle particle-6"></div>
+        </div>
+
         <div class="lifecycle__container container">
           <div class="lifecycle__content">
             <div class="lifecycle__text">
               <span class="lifecycle__label">TRUE NEEDS</span>
               <h2 class="lifecycle__title">BUILT FOR A GREENER FUTURE</h2>
+              <p class="lifecycle__description">
+                At True Needs Sustainable Developers Pvt. Ltd., we revolutionize construction by seamlessly integrating sustainability into every project. Committed to delivering exceptional quality, we create spaces that meet today's needs while contributing positively to tomorrow.
+              </p>
+              <a href="https://wa.me/+919747775150" class="button lifecycle__button" target="_blank">Know More About True Needs</a>
             </div>
             <div class="lifecycle__image">
               <img src="assets/img/about-img-1.png" alt="Lifecycle Builder" class="lifecycle__img">
@@ -245,50 +224,8 @@ unwavering commitment to the planet and its inhabitants.</p>
 
       <!--==================== PROJECT CATEGORIES ====================-->
       <section class="categories section" id="categories">
-        <div class="categories__container container grid">
-          <article class="categories__card">
-            <div class="categories__image">
-              <img src="assets/img/projects-img-1.png" alt="Singular Living" class="categories__img">
-              <div class="categories__overlay">
-                <h3 class="categories__title">Singular Living</h3>
-                <p class="categories__subtitle">Safe, private, and self-contained micro apartments for single residents</p>
-                <a href="#projects" class="categories__button">View Projects</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="categories__card">
-            <div class="categories__image">
-              <img src="assets/img/projects-img-2.png" alt="Budget Residences" class="categories__img">
-              <div class="categories__overlay">
-                <h3 class="categories__title">Budget Residences</h3>
-                <p class="categories__subtitle">Budget apartments for families who aspire for a better living environment</p>
-                <a href="#projects" class="categories__button">View Projects</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="categories__card">
-            <div class="categories__image">
-              <img src="assets/img/projects-img-3.png" alt="Luxury Residences" class="categories__img">
-              <div class="categories__overlay">
-                <h3 class="categories__title">Luxury Residences</h3>
-                <p class="categories__subtitle">Exotic Luxury Residences for achievers to upgrade to a charming lifestyle</p>
-                <a href="#projects" class="categories__button">View Projects</a>
-              </div>
-            </div>
-          </article>
-
-          <article class="categories__card">
-            <div class="categories__image">
-              <img src="assets/img/about-img-2.png" alt="Senior Living" class="categories__img">
-              <div class="categories__overlay">
-                <h3 class="categories__title">Senior Living</h3>
-                <p class="categories__subtitle">Senior Residences for those who believe that retiring doesn't mean retiring from life</p>
-                <a href="#projects" class="categories__button">View Projects</a>
-              </div>
-            </div>
-          </article>
+        <div class="categories__container container grid" id="categories-container">
+          <!-- Categories will be dynamically loaded from data.js -->
         </div>
       </section>
 
@@ -382,55 +319,8 @@ unwavering commitment to the planet and its inhabitants.</p>
             <a href="#contact" class="button">Contact Us</a>
           </div>
 
-          <div class="services__grid">
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-leaf-line"></i></div>
-              <h3 class="services__title">Green Building <br />Construction</h3>
-              <p>Specializing in environmentally conscious construction practices with energy-efficient designs and sustainable building materials.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-building-line"></i></div>
-              <h3 class="services__title">Residential <br />Construction</h3>
-              <p>Crafting homes that blend comfort, functionality, and aesthetic appeal with customized designs to suit individual preferences.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-briefcase-4-line"></i></div>
-              <h3 class="services__title">Commercial <br />Projects</h3>
-              <p>Delivering innovative solutions for commercial spaces with tailored designs to enhance productivity and create distinctive environments.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-tools-line"></i></div>
-              <h3 class="services__title">Renovation & <br />Remodeling</h3>
-              <p>Transforming existing spaces with thoughtful renovations, upgrading structures to meet modern standards while preserving character.</p>
-            </article>
-
-            <!-- New Service Cards -->
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-road-map-line"></i></div>
-              <h3 class="services__title">Infrastructure Development</h3>
-              <p>Contributing to the development of essential public infrastructure. Expertise in the construction of roads, bridges, and utility installations.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-briefcase-line"></i></div>
-              <h3 class="services__title">Project Management</h3>
-              <p>Providing end-to-end project management services. Ensuring timely completion, budget adherence, and quality control.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-lightbulb-line"></i></div>
-              <h3 class="services__title">Consulting Services</h3>
-              <p>Offering expert consultancy on sustainable construction practices. Advising on eco-friendly building materials and energy-efficient designs.</p>
-            </article>
-
-            <article class="services__card hover-raise tilt shine">
-              <div class="services__icon"><i class="ri-home-gear-line"></i></div>
-              <h3 class="services__title">Interior Design and Fit-Outs</h3>
-              <p>Creating aesthetically pleasing and functional interior spaces. Tailored solutions to align with client preferences and brand identity.</p>
-            </article>
+          <div class="services__grid" id="services-grid">
+            <!-- Services will be dynamically loaded from data.js -->
           </div>
         </div>
       </section>
@@ -439,23 +329,8 @@ unwavering commitment to the planet and its inhabitants.</p>
       <section class="service-highlights section">
         <div class="responsible__stats container">
           <h3 class="responsible__stats-title">What We Deliver</h3>
-          <div class="responsible__stats-grid">
-            <div class="responsible__stat-item hover-raise">
-              <span class="responsible__stat-number">01</span>
-              <p class="responsible__stat-text">GREEN BUILDING CONSTRUCTION<br>Energy-efficient and sustainable materials</p>
-            </div>
-            <div class="responsible__stat-item hover-raise">
-              <span class="responsible__stat-number">02</span>
-              <p class="responsible__stat-text">RESIDENTIAL CONSTRUCTION<br>Comfortable, functional and customized homes</p>
-            </div>
-            <div class="responsible__stat-item hover-raise">
-              <span class="responsible__stat-number">03</span>
-              <p class="responsible__stat-text">COMMERCIAL PROJECTS<br>Productive and distinctive workspaces</p>
-            </div>
-            <div class="responsible__stat-item hover-raise">
-              <span class="responsible__stat-number">04</span>
-              <p class="responsible__stat-text">RENOVATION & REMODELING<br>Thoughtful upgrades preserving character</p>
-            </div>
+          <div class="responsible__stats-grid" id="service-stats">
+            <!-- Service stats will be dynamically loaded from data.js -->
           </div>
         </div>
       </section>
@@ -469,60 +344,8 @@ unwavering commitment to the planet and its inhabitants.</p>
           Projects
         </h2>
 
-        <div class="projects__container container grid">
-          <article class="projects__card">
-            <img
-              src="assets/img/projects-img-1.png"
-              alt="image"
-              class="projects__img" />
-
-            <div class="projects__data">
-              <span>Residential Construction</span>
-              <h2 class="projects__title">Two-Story House</h2>
-              <span class="projects__date">January 15, 2024</span>
-
-              <p>
-                Construction of a two-story house with columns, foundations, 
-                floors, ceilings and other finishes.
-              </p>
-            </div>
-          </article>
-
-          <article class="projects__card">
-            <img
-              src="assets/img/projects-img-2.png"
-              alt="image"
-              class="projects__img" />
-
-            <div class="projects__data">
-              <span>Maintenance & Repair</span>
-              <h2 class="projects__title">Stairs & Columns</h2>
-              <span class="projects__date">May 21, 2024</span>
-
-              <p>
-                Professional maintenance and repair of structural elements 
-                ensuring safety and longevity.
-              </p>
-            </div>
-          </article>
-
-          <article class="projects__card">
-            <img
-              src="assets/img/projects-img-3.png"
-              alt="image"
-              class="projects__img" />
-
-            <div class="projects__data">
-              <span>Interior Design</span>
-              <h2 class="projects__title">Modern Kitchen</h2>
-              <span class="projects__date">July 3, 2024</span>
-
-              <p>
-                Complete kitchen renovation with modern design elements 
-                and functional space optimization.
-              </p>
-            </div>
-          </article>
+        <div class="projects__container container grid" id="projects-container">
+          <!-- Projects will be dynamically loaded from data.js -->
         </div>
 
         <div class="projects__more">
@@ -542,151 +365,13 @@ unwavering commitment to the planet and its inhabitants.</p>
           </h2>
 
           <div class="testimonials__container swiper">
-            <div class="swiper-wrapper">
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "True Needs delivered exceptional quality on our residential project. Their attention to sustainable practices and professional approach made our dream home a reality. Highly recommended!"
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-1.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Rajesh Kumar</h3>
-                      <span class="testimonial__position">Homeowner</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "Outstanding construction company! They completed our commercial complex on time and within budget. Their innovative solutions and quality craftsmanship exceeded our expectations."
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-2.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Priya Sharma</h3>
-                      <span class="testimonial__position">Business Owner</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "True Needs transformed our heritage building while preserving its character. Their expertise in renovation and commitment to sustainability is truly commendable."
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-3.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Dr. Arun Nair</h3>
-                      <span class="testimonial__position">Property Developer</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "Working with True Needs was a fantastic experience. Their team's professionalism and expertise in green building construction helped us achieve our sustainability goals while staying within budget."
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-4.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Kavitha Menon</h3>
-                      <span class="testimonial__position">Architect</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "Excellent infrastructure development project! True Needs completed our bridge construction ahead of schedule with outstanding quality. Their engineering solutions are top-notch."
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-5.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Engineer Suresh</h3>
-                      <span class="testimonial__position">Civil Engineer</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
-
-              <article class="testimonial__card swiper-slide">
-                <div class="testimonial__content">
-                  <div class="testimonial__stars">
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                    <i class="ri-star-fill"></i>
-                  </div>
-                  
-                  <p class="testimonial__text">
-                    "True Needs handled our office renovation project beautifully. Their interior design team created a modern workspace that perfectly reflects our company culture. Highly satisfied with the results!"
-                  </p>
-                  
-                  <div class="testimonial__author">
-                    <img src="assets/img/testimonial-6.jpg" alt="Client" class="testimonial__img">
-                    <div class="testimonial__info">
-                      <h3 class="testimonial__name">Maya Joseph</h3>
-                      <span class="testimonial__position">Office Manager</span>
-                    </div>
-                  </div>
-                </div>
-              </article>
+            <div class="swiper-wrapper" id="testimonials-wrapper">
+              <!-- Testimonials will be dynamically loaded from data.js -->
             </div>
+
+            <!-- Navigation Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
 
             <!-- Pagination -->
             <div class="swiper-pagination"></div>
@@ -703,80 +388,118 @@ unwavering commitment to the planet and its inhabitants.</p>
           <div class="contact__container grid">
             <img
               src="assets/img/contact-img.png"
-              alt="image"
+              alt="Contact True Needs"
               class="contact__img" />
 
-            <div class="contact__data grid">
-              <div class="contact__card">
+            <div class="contact__data">
+              <!-- Address Card -->
+              <div class="contact__card hover-raise">
                 <div class="contact__icon">
                   <i class="ri-map-pin-2-line"></i>
                 </div>
-                <h3 class="contact__title">Address</h3>
-                <address class="contact__info">
-                  Periyankavala | Swaraj<br />
-                  Kanchiyar P.O - 685511<br />
-                  Kerala, India
-                </address>
+                <div class="contact__card-content">
+                  <h3 class="contact__title">Address</h3>
+                  <address class="contact__info">
+                    Periyankavala | Swaraj<br />
+                    Kanchiyar P.O - 685511<br />
+                    Kerala, India
+                  </address>
+                  <a href="https://maps.google.com/?q=Periyankavala+Swaraj+Kanchiyar+Kerala" 
+                     target="_blank" 
+                     class="contact__link contact__link--small">
+                    <i class="ri-map-pin-line"></i> Get Directions
+                  </a>
+                </div>
               </div>
 
-              <div class="contact__card">
+              <!-- Phone Card -->
+              <div class="contact__card hover-raise">
                 <div class="contact__icon">
                   <i class="ri-phone-line"></i>
                 </div>
-                <h3 class="contact__title">Phone</h3>
-                <address class="contact__info">
-                  +91 7012572979 <br />
-                  +91 8139852226
-                </address>
+                <div class="contact__card-content">
+                  <h3 class="contact__title">Phone</h3>
+                  <div class="contact__info">
+                    <a href="tel:+917012572979" class="contact__phone-link">
+                      <i class="ri-smartphone-line"></i> +91 7012572979
+                    </a>
+                    <a href="tel:+918139852226" class="contact__phone-link">
+                      <i class="ri-smartphone-line"></i> +91 8139852226
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div class="contact__card">
+              <!-- Email Card -->
+              <div class="contact__card hover-raise">
                 <div class="contact__icon">
                   <i class="ri-mail-line"></i>
                 </div>
-                <h3 class="contact__title">Email</h3>
-                <address class="contact__info">
-                  trueneedssustainable<br />
-                  developers@gmail.com
-                </address>
+                <div class="contact__card-content">
+                  <h3 class="contact__title">Email</h3>
+                  <div class="contact__info">
+                    <a href="mailto:trueneedssustainabledevelopers@gmail.com" class="contact__email-link">
+                      <i class="ri-mail-send-line"></i> trueneedssustainabledevelopers@gmail.com
+                    </a>
+                  </div>
+                </div>
               </div>
 
-              <div class="contact__card">
+              <!-- Messaging Card -->
+              <div class="contact__card hover-raise">
                 <div class="contact__icon">
                   <i class="ri-message-3-line"></i>
                 </div>
-                <h3 class="contact__title">Messaging</h3>
-                <div class="contact__social">
-                  <a
-                    href="https://api.whatsapp.com/send?phone=918139852226&text=Hello%2C%20I%20have%20an%20enquiry%20about%20True%20Needs"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="contact__social-link">
-                    <i class="ri-whatsapp-line"></i>
-                  </a>
-                  <a
-                    href="https://www.messenger.com/"
-                    target="_blank"
-                    class="contact__social-link">
-                    <i class="ri-messenger-line"></i>
-                  </a>
-                  <a
-                    href="https://telegram.org/"
-                    target="_blank"
-                    class="contact__social-link">
-                    <i class="ri-telegram-line"></i>
-                  </a>
+                <div class="contact__card-content">
+                  <h3 class="contact__title">Messaging</h3>
+                  <p class="contact__info contact__info-text">Connect with us instantly</p>
+                  <div class="contact__social">
+                    <a
+                      href="https://wa.me/+918139852226?text=Hello%2C%20I%20have%20an%20enquiry%20about%20True%20Needs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact__social-link"
+                      title="WhatsApp">
+                      <i class="ri-whatsapp-line"></i>
+                    </a>
+                    <a
+                      href="https://m.me/trueneeds"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact__social-link"
+                      title="Messenger">
+                      <i class="ri-messenger-line"></i>
+                    </a>
+                    <a
+                      href="https://t.me/trueneeds"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      class="contact__social-link"
+                      title="Telegram">
+                      <i class="ri-telegram-line"></i>
+                    </a>
+                  </div>
                 </div>
               </div>
 
-              <div class="contact__card">
-                <div class="contact__icon">
+              <!-- Careers Card -->
+              <div class="contact__card hover-raise contact__card--careers">
+                <div class="contact__icon contact__icon--careers">
                   <i class="ri-briefcase-line"></i>
                 </div>
-                <h3 class="contact__title">For<br />Vacancies</h3>
-                <address class="contact__info">
-                  future.trueneeds.in<br />@gmail.com
-                </address>
+                <div class="contact__card-content">
+                  <h3 class="contact__title">For Vacancies</h3>
+                  <p class="contact__info contact__info-text">Join our team</p>
+                  <div class="contact__info">
+                    <a href="mailto:future.trueneeds.in@gmail.com" class="contact__email-link">
+                      <i class="ri-mail-send-line"></i> future.trueneeds.in@gmail.com
+                    </a>
+                  </div>
+                  <a href="mailto:future.trueneeds.in@gmail.com?subject=Career%20Opportunity%20Inquiry" 
+                     class="contact__link contact__link--button">
+                    <i class="ri-send-plane-line"></i> Apply Now
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -890,344 +613,20 @@ unwavering commitment to the planet and its inhabitants.</p>
     <!--=============== SWIPER JS ===============-->
     <script src="assets/js/swiper-bundle.min.js"></script>
 
+    <!--=============== DATA JS ===============-->
+    <script src="assets/js/data.js"></script>
+
+    <!--=============== RENDER JS ===============-->
+    <script src="assets/js/render.js"></script>
+
     <!--=============== MAIN JS ===============-->
     <script src="assets/js/main.js"></script>
 
     <!--=============== ENHANCED INTERACTIONS ===============-->
     <script src="assets/js/enhanced-interactions.js"></script>
 
-    <!--=============== HOMEPAGE PROJECTS LOADER ===============-->
-    <script>
-      // Load featured projects on homepage
-      document.addEventListener('DOMContentLoaded', async () => {
-        try {
-          const featuredProjects = await fetchFeaturedProjects(3);
-          
-          if (featuredProjects && featuredProjects.length > 0) {
-            console.log(`Loaded ${featuredProjects.length} featured projects from Sanity`);
-            updateHomepageProjects(featuredProjects);
-          }
-        } catch (error) {
-          console.log('Using static projects on homepage');
-        }
-      });
-
-      function updateHomepageProjects(projects) {
-        const projectCards = document.querySelectorAll('.projects__card');
-        
-        projects.forEach((project, index) => {
-          if (projectCards[index]) {
-            const card = projectCards[index];
-            const img = card.querySelector('.projects__img');
-            const category = card.querySelector('.projects__data span');
-            const title = card.querySelector('.projects__title');
-            const date = card.querySelector('.projects__date');
-            const description = card.querySelector('.projects__data p');
-            
-            if (img && project.image?.asset?.url) {
-              img.src = project.image.asset.url;
-              img.alt = project.title;
-            }
-            
-            if (category) category.textContent = project.category || 'Construction';
-            if (title) title.textContent = project.title;
-            if (date) date.textContent = formatProjectDate(project.date);
-            if (description) description.textContent = project.description || 'Professional construction project completed with high quality standards.';
-          }
-        });
-      }
-
-      function formatProjectDate(dateString) {
-        if (!dateString) return 'Recent';
-        const date = new Date(dateString);
-        return date.toLocaleDateString('en-US', { 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric' 
-        });
-      }
-    </script>
-
-    <style>
-      /* Enhanced About Section */
-      .about {
-        padding: 6rem 0;
-      }
-
-      .about__container {
-        gap: 3.5rem;
-        align-items: center;
-      }
-
-      .about__data {
-        max-width: 680px;
-      }
-
-      .about__description {
-        margin: 1.5rem 0 2rem 0;
-        line-height: 1.85;
-        font-size: 1.05rem;
-        color: var(--text-color);
-        font-family: var(--body-font);
-        font-weight: var(--font-regular);
-      }
-
-      .about__list {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.25rem 1.5rem;
-        margin-bottom: 2rem;
-      }
-
-      .about__list-item {
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-        padding: 0.5rem 0;
-      }
-
-      .about__list-item i {
-        font-size: 1.25rem;
-        color: var(--first-color);
-      }
-
-      .about__list-item span {
-        font-weight: var(--font-semi-bold);
-        color: var(--title-color);
-        font-family: var(--subheading-font);
-      }
-
-      /* Desktop view - increased gap */
-      @media screen and (min-width: 1024px) {
-        .about__container {
-          gap: 6rem;
-        }
-      }
-
-      /* Services Section - Remove ladder effect */
-      .services__grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-        align-items: start;
-      }
-
-      .services__card {
-        margin-top: 0 !important;
-        transform: translateY(0) !important;
-      }
-
-      @media screen and (min-width: 1024px) {
-        .services__grid {
-          grid-template-columns: repeat(4, 1fr);
-        }
-      }
-
-      @media screen and (max-width: 768px) {
-        .services__grid {
-          grid-template-columns: repeat(2, 1fr);
-          gap: 1.5rem;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .services__grid {
-          grid-template-columns: 1fr;
-        }
-      }
-
-      /* Testimonials Section */
-      .testimonials {
-        background: var(--body-color);
-        padding: 6rem 0;
-      }
-
-      .testimonials .section__title {
-        text-align: center;
-        margin-bottom: 3rem;
-        color: var(--title-color);
-        font-family: var(--header-font);
-        font-weight: var(--font-bold);
-      }
-
-      .testimonials .section__subtitle {
-        text-align: center;
-        display: block;
-        margin-bottom: 1rem;
-        color: var(--second-color);
-        font-family: var(--subheading-font);
-        font-weight: var(--font-semi-bold);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .testimonial__card {
-        background: white;
-        padding: 2.5rem 2rem;
-        border-radius: 1rem;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-        margin: 1rem;
-        height: auto;
-      }
-
-      .testimonial__stars {
-        display: flex;
-        gap: 0.25rem;
-        margin-bottom: 1.5rem;
-      }
-
-      .testimonial__stars i {
-        color: var(--second-color);
-        font-size: 1.2rem;
-      }
-
-      .testimonial__text {
-        font-style: italic;
-        line-height: 1.7;
-        color: var(--text-color);
-        margin-bottom: 2rem;
-        font-size: 1rem;
-        font-family: var(--body-font);
-        font-weight: var(--font-regular);
-      }
-
-      .testimonial__author {
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-      }
-
-      .testimonial__img {
-        width: 60px;
-        height: 60px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 3px solid var(--accent-color);
-      }
-
-      .testimonial__name {
-        font-size: 1.1rem;
-        font-weight: var(--font-semi-bold);
-        color: var(--title-color);
-        margin-bottom: 0.25rem;
-        font-family: var(--subheading-font);
-      }
-
-      .testimonial__position {
-        font-size: 0.9rem;
-        color: var(--text-color);
-        font-family: var(--body-font);
-        font-weight: var(--font-regular);
-      }
-
-      /* Enhanced text visibility for all sections */
-      .projects .section__subtitle {
-        color: var(--accent-color);
-        font-family: var(--subheading-font);
-        font-weight: var(--font-semi-bold);
-        text-transform: uppercase;
-        letter-spacing: 1px;
-      }
-
-      .projects .section__title {
-        color: var(--white-color);
-        font-family: var(--header-font);
-        font-weight: var(--font-bold);
-      }
-
-      /* Responsive Design */
-      @media screen and (max-width: 768px) {
-        .about {
-          padding: 4rem 0;
-        }
-
-        .about__container {
-          gap: 3rem;
-          grid-template-columns: 1fr;
-        }
-
-        .about__images {
-          order: 2;
-          margin-top: 2rem;
-        }
-
-        .about__list {
-          grid-template-columns: 1fr;
-          gap: 1rem;
-        }
-
-        .testimonials {
-          padding: 4rem 0;
-        }
-
-        .testimonial__card {
-          padding: 2rem 1.5rem;
-          margin: 0.5rem;
-        }
-      }
-
-      @media screen and (max-width: 480px) {
-        .about__description {
-          font-size: 0.95rem;
-        }
-
-        .about__images {
-          margin-top: 3rem;
-        }
-
-        .testimonial__text {
-          font-size: 0.95rem;
-        }
-
-        .testimonial__img {
-          width: 50px;
-          height: 50px;
-        }
-      }
-    </style>
-
-    <script>
-      // Initialize testimonials swiper with auto-scroll
-      const testimonialsSwiper = new Swiper('.testimonials__container', {
-        loop: true,
-        spaceBetween: 32,
-        grabCursor: true,
-        autoplay: {
-          delay: 3000,
-          disableOnInteraction: false,
-          pauseOnMouseEnter: true,
-        },
-        speed: 800,
-        pagination: {
-          el: '.swiper-pagination',
-          clickable: true,
-        },
-        breakpoints: {
-          640: {
-            slidesPerView: 1,
-            spaceBetween: 20,
-          },
-          768: {
-            slidesPerView: 2,
-            spaceBetween: 30,
-          },
-          1024: {
-            slidesPerView: 3,
-            spaceBetween: 32,
-          },
-        }
-      });
-
-      // Pause autoplay when user hovers over testimonials
-      const testimonialContainer = document.querySelector('.testimonials__container');
-      if (testimonialContainer) {
-        testimonialContainer.addEventListener('mouseenter', () => {
-          testimonialsSwiper.autoplay.stop();
-        });
-        
-        testimonialContainer.addEventListener('mouseleave', () => {
-          testimonialsSwiper.autoplay.start();
-        });
-      }
-    </script>
+    <!--=============== PAGE INITIALIZATION ===============-->
+    <script src="assets/js/page-init.js"></script>
   </body>
+</html>
 </html>

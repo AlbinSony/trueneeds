@@ -15,12 +15,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css" />
 
+    <!--=============== FONT AWESOME ===============-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
     <!--=============== SWIPER CSS ===============-->
     <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
 
+    <!--=============== PAGE SPECIFIC CSS ===============-->
+    <link rel="stylesheet" href="assets/css/page-specific.css" />
+
     <!--=============== CSS ===============-->
     <link rel="stylesheet" href="assets/css/styles.css" />
-
     <title>Our Projects - True Needs</title>
   </head>
   <body>
@@ -28,8 +35,7 @@
     <header class="header" id="header">
       <nav class="nav container">
         <a href="index.html" class="nav__logo">
-          <i class="ri-building-3-line"></i>
-          <span>True Needs</span>
+          <img src="assets/img/Untitled-1 [Recovered]-01.png" alt="True Needs Logo" class="header__logo-img">
         </a>
 
         <div class="nav__menu" id="nav-menu">
@@ -94,8 +100,8 @@
       <!--==================== ALL PROJECTS ====================-->
       <section class="projects section" id="projects">
         <!-- Loading Spinner -->
-        <div class="loading-spinner" style="display: flex; justify-content: center; align-items: center; height: 200px;">
-          <div style="border: 4px solid #f3f3f3; border-top: 4px solid var(--first-color); border-radius: 50%; width: 40px; height: 40px; animation: spin 2s linear infinite;"></div>
+        <div class="loading-spinner">
+          <div></div>
         </div>
         
         <!-- Projects Container -->
@@ -335,7 +341,7 @@
         
         if (!projects || projects.length === 0) {
           container.innerHTML = `
-            <div class="no-projects" style="grid-column: 1 / -1; text-align: center; padding: 3rem;">
+            <div class="no-projects">
               <h3>No projects available at the moment.</h3>
               <p>Please check back later for our latest projects.</p>
             </div>
@@ -1301,4 +1307,5 @@
       }
     </style>
   </body>
+</html>
 </html>
