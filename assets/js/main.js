@@ -21,6 +21,111 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     }
+
+  /*=============== WHAT MAKES US UNIQUE - MOUSE MOVE GLITTER ANIMATION ===============*/
+  const uniqueStatsGrid = document.getElementById('unique-stats');
+  if (uniqueStatsGrid) {
+    // Create glitter particle on mouse move
+    function createGlitter(e, item) {
+      const rect = item.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      
+      // Create a glitter particle
+      const particle = document.createElement('div');
+      particle.className = 'glitter-particle';
+      
+      // Random properties
+      const size = Math.random() * 8 + 4;
+      const isGreen = Math.random() > 0.3;
+      const isStar = Math.random() > 0.7;
+      
+      if (isStar) {
+        particle.innerHTML = '✦';
+        particle.style.cssText = `
+          position: absolute;
+          left: ${x}px;
+          top: ${y}px;
+          font-size: ${Math.random() * 14 + 8}px;
+          color: ${isGreen ? '#85a751' : '#1c2d47'};
+          text-shadow: 0 0 8px ${isGreen ? 'rgba(133, 167, 81, 0.9)' : 'rgba(28, 45, 71, 0.9)'};
+          pointer-events: none;
+          z-index: 100;
+          transform: translate(-50%, -50%);
+        `;
+      } else {
+        particle.style.cssText = `
+          position: absolute;
+          width: ${size}px;
+          height: ${size}px;
+          left: ${x}px;
+          top: ${y}px;
+          background: ${isGreen ? 'linear-gradient(135deg, #85a751, #a8d060)' : 'linear-gradient(135deg, #1c2d47, #3a5a8a)'};
+          border-radius: 50%;
+          pointer-events: none;
+          z-index: 100;
+          box-shadow: 0 0 ${size + 4}px ${isGreen ? 'rgba(133, 167, 81, 0.8)' : 'rgba(28, 45, 71, 0.8)'};
+          transform: translate(-50%, -50%);
+        `;
+      }
+      
+      item.appendChild(particle);
+      
+      // Animate particle floating up and fading
+      const driftX = (Math.random() - 0.5) * 40;
+      const driftY = -Math.random() * 60 - 20;
+      
+      particle.animate([
+        { 
+          transform: 'translate(-50%, -50%) scale(1)', 
+          opacity: 1 
+        },
+        { 
+          transform: `translate(calc(-50% + ${driftX}px), calc(-50% + ${driftY}px)) scale(0)`, 
+          opacity: 0 
+        }
+      ], {
+        duration: 600 + Math.random() * 400,
+        easing: 'ease-out'
+      }).onfinish = () => particle.remove();
+    }
+    
+    // Throttle function to limit particle creation rate
+    let lastGlitterTime = 0;
+    const glitterThrottle = 50; // Create glitter every 50ms
+    
+    uniqueStatsGrid.addEventListener('mousemove', function(e) {
+      const now = Date.now();
+      if (now - lastGlitterTime < glitterThrottle) return;
+      lastGlitterTime = now;
+      
+      let item = e.target.closest('.responsible__stat-item');
+      if (!item) return;
+      
+      createGlitter(e, item);
+    });
+    
+    // Also add click effect
+    uniqueStatsGrid.addEventListener('click', function(e) {
+      let item = e.target.closest('.responsible__stat-item');
+      if (!item) return;
+      
+      // Create burst of particles on click
+      for (let i = 0; i < 15; i++) {
+        setTimeout(() => {
+          const fakeEvent = {
+            clientX: e.clientX + (Math.random() - 0.5) * 40,
+            clientY: e.clientY + (Math.random() - 0.5) * 40
+          };
+          createGlitter(fakeEvent, item);
+        }, i * 30);
+      }
+      
+      item.classList.add('clicked');
+      setTimeout(() => item.classList.remove('clicked'), 600);
+    });
+  }
+
   /*=============== DOM ELEMENTS ===============*/
   const navMenu = document.getElementById('nav-menu');
   const navToggle = document.getElementById('nav-toggle');

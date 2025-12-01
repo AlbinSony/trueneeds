@@ -79,11 +79,16 @@ const Renderer = {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    container.innerHTML = services.map(service => `
+    container.innerHTML = services.map((service, index) => `
       <article class="services__card hover-raise tilt shine">
-        <div class="services__icon"><i class="${service.icon}"></i></div>
-        <h3 class="services__title">${service.title}</h3>
-        <p>${service.description}</p>
+        <div class="services__card-image">
+          <img src="${service.image || 'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop'}" alt="${service.title}">
+        </div>
+        <div class="services__card-content">
+          <div class="services__icon"><i class="${service.icon}"></i></div>
+          <h3 class="services__title">${service.title}</h3>
+          <p>${service.description}</p>
+        </div>
       </article>
     `).join('');
   },
