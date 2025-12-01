@@ -77,7 +77,7 @@ const websiteData = {
       position: "Homeowner",
       rating: 5,
       text: "True Needs delivered exceptional quality on our residential project. Their attention to sustainable practices and professional approach made our dream home a reality. Highly recommended!",
-      image: "assets/img/testimonial-1.jpg"
+      image: "https://randomuser.me/api/portraits/men/86.jpg"
     },
     {
       id: 2,
@@ -85,7 +85,7 @@ const websiteData = {
       position: "Business Owner",
       rating: 5,
       text: "Outstanding construction company! They completed our commercial complex on time and within budget. Their innovative solutions and quality craftsmanship exceeded our expectations.",
-      image: "assets/img/testimonial-2.jpg"
+      image: "https://randomuser.me/api/portraits/women/90.jpg"
     },
     {
       id: 3,
@@ -93,7 +93,7 @@ const websiteData = {
       position: "Property Developer",
       rating: 5,
       text: "True Needs transformed our heritage building while preserving its character. Their expertise in renovation and commitment to sustainability is truly commendable.",
-      image: "assets/img/testimonial-3.jpg"
+      image: "https://randomuser.me/api/portraits/men/32.jpg"
     },
     {
       id: 4,
@@ -101,7 +101,7 @@ const websiteData = {
       position: "Architect",
       rating: 5,
       text: "Working with True Needs was a fantastic experience. Their team's professionalism and expertise in green building construction helped us achieve our sustainability goals while staying within budget.",
-      image: "assets/img/testimonial-4.jpg"
+      image: "https://randomuser.me/api/portraits/women/79.jpg"
     },
     {
       id: 5,
@@ -109,7 +109,7 @@ const websiteData = {
       position: "Civil Engineer",
       rating: 5,
       text: "Excellent infrastructure development project! True Needs completed our bridge construction ahead of schedule with outstanding quality. Their engineering solutions are top-notch.",
-      image: "assets/img/testimonial-5.jpg"
+      image: "https://randomuser.me/api/portraits/men/45.jpg"
     },
     {
       id: 6,
@@ -117,7 +117,7 @@ const websiteData = {
       position: "Office Manager",
       rating: 5,
       text: "True Needs handled our office renovation project beautifully. Their interior design team created a modern workspace that perfectly reflects our company culture. Highly satisfied with the results!",
-      image: "assets/img/testimonial-6.jpg"
+      image: "https://randomuser.me/api/portraits/women/63.jpg"
     }
   ],
 
@@ -127,49 +127,57 @@ const websiteData = {
       id: 1,
       icon: "ri-leaf-line",
       title: "Green Building Construction",
-      description: "Specializing in environmentally conscious construction practices with energy-efficient designs and sustainable building materials."
+      description: "Specializing in environmentally conscious construction practices with energy-efficient designs and sustainable building materials.",
+      image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?w=600&h=400&fit=crop"
     },
     {
       id: 2,
       icon: "ri-building-line",
       title: "Residential Construction",
-      description: "Crafting homes that blend comfort, functionality, and aesthetic appeal with customized designs to suit individual preferences."
+      description: "Crafting homes that blend comfort, functionality, and aesthetic appeal with customized designs to suit individual preferences.",
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=600&h=400&fit=crop"
     },
     {
       id: 3,
       icon: "ri-briefcase-4-line",
       title: "Commercial Projects",
-      description: "Delivering innovative solutions for commercial spaces with tailored designs to enhance productivity and create distinctive environments."
+      description: "Delivering innovative solutions for commercial spaces with tailored designs to enhance productivity and create distinctive environments.",
+      image: "https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&h=400&fit=crop"
     },
     {
       id: 4,
       icon: "ri-tools-line",
       title: "Renovation & Remodeling",
-      description: "Transforming existing spaces with thoughtful renovations, upgrading structures to meet modern standards while preserving character."
+      description: "Transforming existing spaces with thoughtful renovations, upgrading structures to meet modern standards while preserving character.",
+      image: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&h=400&fit=crop"
     },
     {
       id: 5,
       icon: "ri-road-map-line",
       title: "Infrastructure Development",
-      description: "Contributing to the development of essential public infrastructure. Expertise in the construction of roads, bridges, and utility installations."
+      description: "Contributing to the development of essential public infrastructure. Expertise in the construction of roads, bridges, and utility installations.",
+      image: "https://images.unsplash.com/photo-1513828583688-c52646db42da?w=600&h=400&fit=crop"
     },
     {
       id: 6,
       icon: "ri-briefcase-line",
       title: "Project Management",
-      description: "Providing end-to-end project management services. Ensuring timely completion, budget adherence, and quality control."
+      description: "Providing end-to-end project management services. Ensuring timely completion, budget adherence, and quality control.",
+      image: "https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600&h=400&fit=crop"
     },
     {
       id: 7,
       icon: "ri-lightbulb-line",
       title: "Consulting Services",
-      description: "Offering expert consultancy on sustainable construction practices. Advising on eco-friendly building materials and energy-efficient designs."
+      description: "Offering expert consultancy on sustainable construction practices. Advising on eco-friendly building materials and energy-efficient designs.",
+      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=600&h=400&fit=crop"
     },
     {
       id: 8,
       icon: "ri-home-gear-line",
       title: "Interior Design and Fit-Outs",
-      description: "Creating aesthetically pleasing and functional interior spaces. Tailored solutions to align with client preferences and brand identity."
+      description: "Creating aesthetically pleasing and functional interior spaces. Tailored solutions to align with client preferences and brand identity.",
+      image: "https://images.unsplash.com/photo-1618219908412-a29a1bb7b86e?w=600&h=400&fit=crop"
     }
   ],
 
